@@ -549,20 +549,21 @@ const hero=document.getElementById('hero');
 let tRotX=0,tRotY=0,tMoveX=0,tMoveY=0,tEyeX=0,tEyeY=0;
 let cRotX=0,cRotY=0,cMoveX=0,cMoveY=0,cEyeX=0,cEyeY=0;
 
-document.addEventListener('mousemove',(e)=>{
+hero.addEventListener('mousemove',(e)=>{
   const rect=hero.getBoundingClientRect();
-  const cx=rect.width/2,cy=rect.height/2+rect.top;
-  const x=e.clientX,y=e.clientY;
-  const dx=(x-cx)/cx;
-  const dy=(y-cy)/cy;
-  const clampedX=Math.max(-1,Math.min(1,dx));
-  const clampedY=Math.max(-1,Math.min(1,dy));
-  tRotY=clampedX*10;
-  tRotX=-clampedY*6;
-  tMoveX=clampedX*20;
-  tMoveY=clampedY*12;
-  tEyeX=clampedX*6;
-  tEyeY=clampedY*5+15;
+  const cx=rect.width/2,cy=rect.height/2;
+  const x=e.clientX-rect.left,y=e.clientY-rect.top;
+  tRotY=((x-cx)/cx)*10;
+  tRotX=-((y-cy)/cy)*6;
+  tMoveX=((x-cx)/cx)*20;
+  tMoveY=((y-cy)/cy)*12;
+  tEyeX=Math.max(-8,Math.min(8,((x-cx)/cx)*5));
+  tEyeY=Math.max(-6,Math.min(6,((y-cy)/cy)*4))+15;
+});
+
+hero.addEventListener('mouseleave',()=>{
+  tRotX=0;tRotY=0;tMoveX=0;tMoveY=0;tEyeX=0;tEyeY=0;
+});
 });
 });
 

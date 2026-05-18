@@ -596,6 +596,13 @@ function animateLion() {
   requestAnimationFrame(animateLion);
 }
 animateLion();
+  // SEAMLESS REVERSE LOOP
+const lv=document.getElementById('lionVideo');
+let playDir=1;
+lv.addEventListener('ended',()=>{
+  if(playDir===1){lv.playbackRate=-1;lv.play();playDir=-1;}
+  else{lv.playbackRate=1;lv.play();playDir=1;}
+});
 
 // STARS
 const stars=document.getElementById('stars');

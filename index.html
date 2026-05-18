@@ -557,8 +557,8 @@ hero.addEventListener('mousemove',(e)=>{
   tRotX=-((y-cy)/cy)*6;
   tMoveX=((x-cx)/cx)*20;
   tMoveY=((y-cy)/cy)*12;
-  tEyeX=((x-cx)/cx)*5;
-  tEyeY=((y-cy)/cy)*4+15;
+  tEyeX=Math.max(-8,Math.min(8,((x-cx)/cx)*5));
+  tEyeY=Math.max(-6,Math.min(6,((y-cy)/cy)*4))+15;
 });
 
 hero.addEventListener('mouseleave',()=>{

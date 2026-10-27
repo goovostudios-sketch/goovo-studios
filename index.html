@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Goovo Studios — Loud On Purpose</title>
+<meta name="description" content="Branding, motion, and web out of Lahore, for clients in six countries. AI is in the process, not in the credit line. Craft decides the outcome.">
+<link rel="canonical" href="https://goovostudios.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Goovo Studios">
+<meta property="og:url" content="https://goovostudios.com/">
+<meta property="og:title" content="Goovo Studios — Loud On Purpose">
+<meta property="og:description" content="Branding, motion, and web out of Lahore, for clients in six countries. AI is in the process, not in the credit line.">
+<meta property="og:image" content="https://goovostudios.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Goovo Studios — Loud On Purpose">
+<meta name="twitter:description" content="Branding, motion, and web out of Lahore, for clients in six countries.">
+<meta name="twitter:image" content="https://goovostudios.com/og-image.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#3B1450">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;600;800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<script>
+/* motion flag set before paint: .js = scripts run, .motion = scripts run and motion allowed */
+(function(d){d.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('motion');})(document.documentElement);
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Goovo Studios",
+  "slogan": "Loud On Purpose",
+  "description": "Pakistan's AI-driven creative studio for brands that refuse to blend in. Branding, motion, and web out of Lahore.",
+  "url": "https://goovostudios.com/",
+  "logo": "https://goovostudios.com/icon-512.png",
+  "image": "https://goovostudios.com/og-image.png",
+  "email": "hello@goovostudios.com",
+  "telephone": "+92-322-873-8738",
+  "foundingDate": "2024",
+  "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+  "sameAs": ["https://www.instagram.com/goovostudios/", "https://www.behance.net/goovostudios", "https://dribbble.com/goovostudios", "https://www.linkedin.com/company/goovostudios/", "https://www.facebook.com/Goovostudios/"]
+}
+</script>
+<style>
+/* ═══════════════════════════════════════════════════════════
+   GOOVO STUDIOS — v13 · built on brand book v4.0
+   Idea: "Through the O". The wordmark's stadium, counter,
+   bar and column are the only devices on the page.
+   Motion: fast in, settled out. Nothing bounces or loops.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── TOKENS ── four colours, violet leads ── */
+:root{
+  --violet:#3B1450; --violet-300:#5E2A78; --violet-500:#220A2F; --violet-700:#2A0E37; --violet-100:#AC90BA;
+  --ink:#0E0E0E; --ink-2:#171717; --ink-3:#222;
+  --bone:#F3F0DB; --bone-100:#FBF9F1; --bone-300:#E3DFC4;
+  --orange:#F29045; --orange-400:#C96A26;
+  --ash:#8A8A85;
+  --ease-brand:cubic-bezier(.2,.9,.1,1);
+  --ease-std:cubic-bezier(.4,0,.2,1);
+  --ease-exit:cubic-bezier(.4,0,1,1);
+  --t-micro:120ms; --t-ui:240ms; --t-sec:400ms;
+  --gutter:max(16px,5vw);
+  --max:1440px;
+  --sec:clamp(96px,12vw,192px);
+  --atmos:radial-gradient(130% 110% at 12% -8%,var(--violet-300) 0%,var(--violet) 44%,var(--violet-700) 100%);
+}
+
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--ink)}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{margin:0;background:var(--ink);color:var(--bone);font:400 17px/1.75 Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+::selection{background:var(--orange);color:var(--ink)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:fixed;left:16px;top:-80px;z-index:2000;background:var(--orange);color:var(--ink);padding:14px 24px;border-radius:999px;font-weight:600}
+.skip:focus{top:16px}
+
+/* ── TYPE ── Unbounded for display, Archivo for text, Plex Arabic for Urdu ── */
+.d-xl{font:800 clamp(44px,9vw,148px)/.9 Unbounded,sans-serif;letter-spacing:-.035em;margin:0}
+.d-l{font:800 clamp(40px,6.6vw,104px)/.94 Unbounded,sans-serif;letter-spacing:-.035em;margin:0}
+.d-m{font:600 clamp(32px,4.6vw,72px)/1 Unbounded,sans-serif;letter-spacing:-.028em;margin:0}
+.h3{font:600 clamp(22px,2.2vw,32px)/1.15 Unbounded,sans-serif;letter-spacing:-.02em;margin:0}
+.lead{font:400 clamp(17px,1.4vw,21px)/1.7 Archivo,sans-serif;margin:0;max-width:56ch}
+.cap{font:500 12.5px/1.4 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.o{color:var(--orange)}
+.muted{color:var(--ash)}
+.urdu{font-family:"IBM Plex Sans Arabic",sans-serif;line-height:1.9}
+/* display Urdu: the drawn treatment — 45° extrusion, two flat steps, no blur */
+.urdu-d{
+  font:700 1em/1.25 "IBM Plex Sans Arabic",sans-serif;color:var(--bone);display:inline-block;direction:rtl;
+  text-shadow:.02em .02em 0 var(--orange),.04em .04em 0 var(--orange),.06em .06em 0 var(--orange),.08em .08em 0 var(--orange),
+              .1em .1em 0 var(--violet-500),.12em .12em 0 var(--violet-500),.14em .14em 0 var(--violet-500),.16em .16em 0 var(--violet-500);
+}
+.urdu-d.on-orange{text-shadow:.02em .02em 0 var(--violet),.04em .04em 0 var(--violet),.06em .06em 0 var(--violet),.08em .08em 0 var(--violet),.1em .1em 0 var(--ink),.12em .12em 0 var(--ink),.14em .14em 0 var(--ink),.16em .16em 0 var(--ink)}
+
+/* split headings — words rise through a mask */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.wi{display:inline-block;will-change:transform}
+
+/* section label: caption + bar module */
+.label{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.label i{display:block;width:36px;height:6px;background:var(--orange);flex:0 0 auto}
+
+/* ── WORDMARK ── */
+.wm{fill:currentColor;overflow:visible}
+.wm .l{will-change:transform}
+
+/* ── BUTTONS ── stadium module becomes the button ── */
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 30px;border-radius:999px;
+  font:600 16px/1 Archivo,sans-serif;cursor:pointer;border:1.5px solid transparent;overflow:hidden;isolation:isolate;
+  transition:color var(--t-ui) var(--ease-std),border-color var(--t-ui) var(--ease-std);
+}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--bone);transform:translateY(101%);transition:transform var(--t-ui) var(--ease-brand)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn svg{width:16px;height:16px;flex:0 0 auto;transition:transform var(--t-ui) var(--ease-brand)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-o{background:var(--orange);color:var(--ink)}
+.btn-o:hover{color:var(--ink)}
+.btn-line{border-color:currentColor}
+.btn-line:hover{color:var(--ink);border-color:var(--bone)}
+.on-bone .btn-line::before{background:var(--ink)}
+.on-bone .btn-line:hover{color:var(--bone);border-color:var(--ink)}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.55;pointer-events:none}
+
+/* ── SURFACES ── */
+.on-violet{background:var(--violet);color:var(--bone)}
+.on-violet .muted{color:var(--violet-100)}
+.on-ink{background:var(--ink);color:var(--bone)}
+.on-bone{background:var(--bone);color:var(--ink)}
+.on-bone .muted{color:#5d5b52}
+.sec{padding-block:var(--sec);position:relative}
+.sec-head{display:grid;gap:32px;margin-bottom:clamp(48px,6vw,96px)}
+@media (min-width:900px){.sec-head{grid-template-columns:7fr 5fr;align-items:end;gap:64px}}
+
+/* ── NAV ── */
+#nav{position:fixed;inset:0 0 auto 0;z-index:900;padding-top:env(safe-area-inset-top);transition:transform 400ms var(--ease-brand),background var(--t-ui) var(--ease-std)}
+#nav.stuck{background:color-mix(in srgb,var(--violet-700) 92%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+#nav.hide{transform:translateY(-100%)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:80px;transition:height var(--t-ui) var(--ease-std)}
+#nav.stuck .wrap{height:64px}
+.nav-logo{display:inline-flex;align-items:center;min-height:44px;color:var(--bone)}
+.nav-logo svg{width:112px;height:auto}
+.nav-links{display:none;gap:32px;list-style:none;margin:0;padding:0}
+.nav-links a{position:relative;display:inline-block;padding:12px 0;font:500 15px/1 Archivo,sans-serif;color:var(--bone)}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform var(--t-ui) var(--ease-brand)}
+.nav-links a:hover::after,.nav-links a.cur::after{transform:none}
+.nav-cta{display:none;min-height:46px;padding:0 22px;font-size:15px}
+#progress{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--orange);transform:scaleX(0);transform-origin:left}
+#burger{display:flex;flex-direction:column;align-items:center;justify-content:center;width:48px;height:48px;margin-right:-10px;background:none;border:0;cursor:pointer;color:var(--bone)}
+#burger span{display:block;width:26px;height:2px;background:currentColor;transition:transform var(--t-ui) var(--ease-std)}
+#burger span+span{margin-top:7px}
+#burger[aria-expanded="true"] span:first-child{transform:translateY(4.5px) rotate(45deg)}
+#burger[aria-expanded="true"] span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+@media (min-width:980px){.nav-links{display:flex}.nav-cta{display:inline-flex}#burger{display:none}}
+
+#menu{position:fixed;inset:0;z-index:880;background:var(--violet);display:flex;flex-direction:column;justify-content:flex-end;
+  padding:120px var(--gutter) calc(40px + env(safe-area-inset-bottom));clip-path:inset(0 0 0 100%);visibility:hidden;
+  transition:clip-path 400ms var(--ease-brand),visibility 0s 400ms}
+#menu.open{clip-path:inset(0 0 0 0);visibility:visible;transition:clip-path 400ms var(--ease-brand)}
+#menu a.mi{display:block;font:600 clamp(36px,10vw,64px)/1.2 Unbounded,sans-serif;letter-spacing:-.03em;color:var(--bone);padding:4px 0}
+#menu a.mi:hover{color:var(--orange)}
+#menu .m-foot{margin-top:40px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+
+/* ── HERO ── the one atmospheric gradient on the page ── */
+#hero{position:relative;min-height:100svh;background:var(--atmos);color:var(--bone);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:calc(112px + env(safe-area-inset-top)) 0 clamp(32px,5vh,64px)}
+.hero-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(12,1fr);gap:0;padding-inline:var(--gutter);max-width:var(--max);margin-inline:auto;pointer-events:none}
+.hero-grid i{border-left:1px solid rgba(243,240,219,.06)}
+.hero-grid i:last-child{border-right:1px solid rgba(243,240,219,.06)}
+.hero-edge{position:absolute;top:0;right:0;bottom:0;width:clamp(10px,1.6vw,26px);background:var(--orange);transform-origin:top}
+.hero-inner{position:relative;z-index:2}
+.hero-meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--violet-100);margin-bottom:clamp(24px,4vh,48px)}
+.hero-h1{margin:0}
+.wm-hero{width:100%;height:auto;color:var(--bone)}
+.wm-clip{overflow:hidden;padding-bottom:2px}
+.hero-row{display:grid;gap:24px;margin-top:clamp(24px,4vh,48px);padding-top:clamp(24px,3vh,32px);border-top:1px solid rgba(243,240,219,.16)}
+.hero-tag{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 32px}
+.hero-tag .en{font:800 clamp(24px,2.8vw,40px)/1.1 Unbounded,sans-serif;letter-spacing:-.03em;color:var(--orange)}
+.hero-tag .urdu-d{font-size:clamp(30px,3.6vw,54px)}
+.hero-sub{margin:0;color:var(--violet-100);max-width:46ch;font-size:clamp(16px,1.2vw,18px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+@media (min-width:1000px){
+  .hero-row{grid-template-columns:5fr 4fr 3fr;align-items:end;gap:48px}
+  .hero-cta{justify-content:flex-end}
+}
+.scroll-cue{position:absolute;left:var(--gutter);top:50%;z-index:2;display:none;writing-mode:vertical-rl;transform:rotate(180deg);color:var(--violet-100)}
+@media (min-width:1000px) and (min-height:760px){.scroll-cue{display:block}}
+html.motion:not(.ready) [data-intro]{opacity:0}
+html.motion:not(.ready) .wm-hero .l{opacity:0}
+
+/* ── PORTAL ── the O's counter opens onto the work ── */
+#portal{position:relative;background:var(--violet-700);color:var(--bone)}
+.portal-pin{position:relative;padding:var(--sec) var(--gutter)}
+.ph{display:block;text-align:center;font:800 clamp(30px,5.4vw,88px)/1 Unbounded,sans-serif;letter-spacing:-.035em}
+.ph-b{color:var(--orange)}
+.portal-win{position:relative;margin:48px auto;height:80vh;border-radius:28px;overflow:hidden;background:var(--ink)}
+.pw-cols{position:absolute;inset:-12% -4%;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,18px);padding:0 clamp(8px,1.2vw,18px)}
+.pw-col{display:grid;gap:clamp(8px,1.2vw,18px);align-content:start}
+.pw-col:nth-child(2){margin-top:-18%}
+.pw-cap{position:absolute;inset:auto 0 0 0;z-index:2;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end;padding:clamp(24px,4vw,56px);background:linear-gradient(to top,rgba(14,14,14,.86),rgba(14,14,14,0))}
+.pw-cap .d-m{max-width:12ch}
+html.motion #portal{height:340vh}
+html.motion .portal-pin{position:sticky;top:0;height:100vh;height:100svh;padding:0;overflow:hidden}
+html.motion .portal-win{position:absolute;inset:0;margin:0;height:auto;border-radius:0}
+html.motion .ph{position:absolute;left:var(--gutter);right:var(--gutter);z-index:3}
+html.motion .ph-a{bottom:calc(50% + min(22vw,240px) * .833 + 28px)}
+html.motion .ph-b{top:calc(50% + min(22vw,240px) * .833 + 28px)}
+html.motion .pw-cap{opacity:0}
+
+/* media tile with brand-colour fallback poster (never shows broken) */
+.mt{position:relative;margin:0;overflow:hidden;background:var(--pb,var(--violet));aspect-ratio:4/5;border-radius:clamp(10px,1.4vw,22px)}
+.mt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mt .fb{position:absolute;inset:0;display:none;place-items:center;padding:10%;text-align:center;color:var(--pf,var(--bone));
+  font:800 clamp(18px,3vw,48px)/.92 Unbounded,sans-serif;letter-spacing:-.03em;text-transform:uppercase}
+.mt.noimg .fb{display:grid}
+
+/* ── MANIFESTO ── bone ── */
+#about .big{font:800 clamp(40px,7vw,120px)/.92 Unbounded,sans-serif;letter-spacing:-.04em;margin:0 0 clamp(48px,6vw,96px);max-width:12ch}
+.manifesto{font:500 clamp(22px,2.6vw,40px)/1.35 Archivo,sans-serif;letter-spacing:-.01em;margin:0;max-width:30ch}
+.manifesto .mw{transition:none}
+.about-grid{display:grid;gap:64px}
+@media (min-width:1000px){.about-grid{grid-template-columns:7fr 5fr;gap:96px;align-items:start}}
+.are{width:100%;border-collapse:collapse;font-size:17px}
+.are th{background:var(--ink);color:var(--bone);text-align:left;padding:14px 20px;font:500 12px/1.2 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.are th+th{color:var(--ash)}
+.are td{padding:18px 20px;border-bottom:1px solid rgba(14,14,14,.12)}
+.are tr:nth-child(odd) td{background:var(--bone-300)}
+.are td+td{color:#6b685d}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(24px,5vw,72px);margin-top:clamp(64px,8vw,128px);padding-top:32px;border-top:1px solid rgba(14,14,14,.16)}
+.stats b{display:block;font:800 clamp(36px,5.4vw,88px)/1 Unbounded,sans-serif;letter-spacing:-.04em}
+.stats span{display:block;margin-top:12px}
+
+/* ── SERVICES ── ink, rows wipe violet along the column edge ── */
+.srows{border-top:1px solid rgba(243,240,219,.14)}
+.srow{position:relative;display:grid;grid-template-columns:48px 1fr;gap:8px 24px;padding:32px 0;border-bottom:1px solid rgba(243,240,219,.14);isolation:isolate}
+.srow::before{content:"";position:absolute;inset:0 calc(var(--gutter) * -1);z-index:-1;background:var(--violet);transform:scaleX(0);transform-origin:left;transition:transform 400ms var(--ease-brand)}
+.srow:hover::before{transform:none}
+.srow .sn{font:500 13px/2.2 Archivo,sans-serif;letter-spacing:.16em;color:var(--orange)}
+.srow h3{margin:0;font:600 clamp(26px,3.6vw,56px)/1.05 Unbounded,sans-serif;letter-spacing:-.03em}
+.srow p{grid-column:2;margin:0;color:var(--ash);max-width:48ch;transition:color var(--t-ui) var(--ease-std)}
+.srow:hover p{color:var(--violet-100)}
+.srow .mod{display:none;width:56px;height:56px}
+@media (min-width:900px){
+  .srow{grid-template-columns:80px 1.2fr 1fr 56px;align-items:center;padding:40px 0}
+  .srow p{grid-column:auto}
+  .srow .mod{display:block;transition:transform 400ms var(--ease-brand)}
+  .srow:hover .mod{transform:translateX(-12px)}
+}
+
+/* ── WORK ── horizontal case strip ── */
+#work{background:var(--violet);color:var(--bone);overflow:hidden}
+.work-inner{padding-block:var(--sec)}
+.work-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px}
+.work-track{display:grid;gap:56px;padding-inline:var(--gutter);max-width:var(--max);margin-inline:auto}
+@media (min-width:700px){.work-track{grid-template-columns:1fr 1fr;gap:48px 24px}}
+.wcard{display:block;color:var(--bone);cursor:pointer}
+.wcard .mt{aspect-ratio:4/5}
+.wcard .mt img{inset:0 -8%;width:116%;transition:scale 900ms var(--ease-brand)}
+.wcard:hover .mt img{scale:1.05}
+.wmeta{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding-top:20px}
+.wmeta .n{font:600 13px/1.6 Archivo,sans-serif;letter-spacing:.14em;color:var(--orange)}
+.wmeta h3{margin:0;font:600 clamp(22px,2vw,30px)/1.1 Unbounded,sans-serif;letter-spacing:-.025em}
+.wmeta p{grid-column:2;margin:0;color:var(--violet-100);font-size:15.5px;line-height:1.6;max-width:42ch}
+.wtags{grid-column:2;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.wtags span{padding:6px 12px;border:1px solid rgba(243,240,219,.24);border-radius:999px;font:500 12px/1 Archivo,sans-serif;letter-spacing:.06em}
+.work-rail{display:none}
+.wend{display:flex;flex-direction:column;justify-content:space-between;background:var(--orange);color:var(--ink);border-radius:clamp(10px,1.4vw,22px);padding:clamp(28px,3vw,48px);aspect-ratio:4/5}
+.wend .urdu-d{font-size:clamp(40px,4vw,64px);align-self:flex-end}
+.wend .btn::before{background:var(--ink)}
+.wend .btn:hover{color:var(--orange);border-color:var(--ink)}
+/* desktop + motion: pinned horizontal run */
+@media (min-width:1000px) and (min-height:640px){
+  html.motion #work{height:100vh;height:100svh}
+  html.motion .work-inner{height:100%;display:flex;flex-direction:column;justify-content:center;padding-block:96px 48px}
+  html.motion .work-track{display:flex;gap:32px;width:max-content;max-width:none;margin:0;--ch:min(54vh,620px)}
+  html.motion .wcard,html.motion .wend{width:calc(var(--ch) * .8);flex:0 0 auto}
+  html.motion .wend{height:var(--ch);aspect-ratio:auto}
+  html.motion .wcard .mt{height:var(--ch);aspect-ratio:auto}
+  html.motion .work-head{margin-bottom:40px}
+  html.motion .work-rail{display:flex;align-items:center;gap:24px;margin-top:40px}
+}
+.rail{flex:1;height:2px;background:rgba(243,240,219,.16);overflow:hidden}
+.rail i{display:block;height:100%;background:var(--orange);transform:scaleX(0);transform-origin:left}
+.count{font:500 13px/1 Archivo,sans-serif;letter-spacing:.16em;font-variant-numeric:tabular-nums}
+#view{position:fixed;left:0;top:0;z-index:950;pointer-events:none;display:grid;place-items:center;width:96px;height:96px;margin:-48px 0 0 -48px;border-radius:999px;background:var(--orange);color:var(--ink);font:600 14px/1 Archivo,sans-serif;transform:scale(0)}
+
+/* ── INDEX ── more from the studio ── */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filter{min-height:44px;padding:0 20px;border-radius:999px;border:1px solid rgba(243,240,219,.28);background:transparent;cursor:pointer;font:500 14px/1 Archivo,sans-serif;transition:background var(--t-micro) var(--ease-std),color var(--t-micro) var(--ease-std),border-color var(--t-micro) var(--ease-std)}
+.filter:hover{border-color:var(--orange);color:var(--orange)}
+.filter[aria-pressed="true"]{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.idx{list-style:none;margin:0;padding:0;border-top:1px solid rgba(243,240,219,.14)}
+.idx li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:4px 16px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(243,240,219,.14);transition:opacity var(--t-ui) var(--ease-std),padding var(--t-ui) var(--ease-brand)}
+.idx .n{font:500 12.5px/1 Archivo,sans-serif;letter-spacing:.14em;color:var(--ash)}
+.idx .t{font:600 clamp(20px,2.4vw,36px)/1.1 Unbounded,sans-serif;letter-spacing:-.025em}
+.idx .k{grid-column:2;color:var(--ash);font-size:15px}
+.idx li.dim{opacity:.18}
+.idx li.end .t{color:var(--orange)}
+@media (min-width:800px){
+  .idx li{grid-template-columns:64px 1fr auto;padding:26px 0}
+  .idx .k{grid-column:auto}
+  @media (hover:hover){.idx li:not(.dim):hover{padding-left:24px}.idx li:not(.dim):hover .t{color:var(--orange)}}
+}
+#prev{position:fixed;left:0;top:0;z-index:40;width:240px;pointer-events:none;opacity:0;margin:-150px 0 0 24px}
+#prev .mt{aspect-ratio:4/5}
+
+/* ── PROCESS ── repetition with one break ── */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.step{position:relative;padding:32px 0 32px 0;border-top:1px solid rgba(14,14,14,.16)}
+.step .bar{display:block;height:6px;width:36px;background:rgba(14,14,14,.18);margin-bottom:24px;transition:width 400ms var(--ease-brand),background var(--t-ui) var(--ease-std)}
+.step b{display:block;font:800 clamp(44px,5vw,80px)/1 Unbounded,sans-serif;letter-spacing:-.04em;color:rgba(14,14,14,.2);transition:color var(--t-ui) var(--ease-std)}
+.step h3{margin:16px 0 8px;font:600 20px/1.3 Archivo,sans-serif}
+.step p{margin:0;color:#5d5b52;font-size:16px;line-height:1.7}
+.step.on .bar{width:100%;background:var(--orange)}
+.step.on b{color:var(--ink)}
+@media (min-width:900px){
+  .steps{grid-template-columns:repeat(5,1fr);border-left:1px solid rgba(14,14,14,.16)}
+  .step{padding:32px 24px 48px;border-top:0;border-right:1px solid rgba(14,14,14,.16)}
+}
+
+/* ── STUDIO / GOAVA ── the character lives outside the identity ── */
+#studio{background:var(--violet-700);color:var(--bone);overflow:hidden}
+.studio-grid{display:grid;gap:48px;align-items:center}
+@media (min-width:1000px){.studio-grid{grid-template-columns:5fr 6fr;gap:64px}}
+.goava{position:relative;width:100%;aspect-ratio:800/720;
+  --g-sides:linear-gradient(90deg,transparent 0,#000 18%,#000 92%,transparent 100%);
+  --g-tb:linear-gradient(180deg,transparent 0,#000 16%,#000 86%,transparent 100%);
+  -webkit-mask-image:var(--g-sides),var(--g-tb);-webkit-mask-composite:source-in;mask-image:var(--g-sides),var(--g-tb);mask-composite:intersect}
+.goava>*{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.g-idle{opacity:0}.goava.ready .g-idle{opacity:1}
+.g-act{opacity:0}.g-act.on{opacity:1}
+.goava-ctl{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.g-btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px 0 16px;border-radius:999px;cursor:pointer;
+  border:1px solid rgba(243,240,219,.3);background:transparent;color:var(--bone);font:600 15px/1 Archivo,sans-serif;
+  transition:background var(--t-ui) var(--ease-std),border-color var(--t-ui) var(--ease-std),color var(--t-ui) var(--ease-std)}
+.g-btn svg{width:18px;height:18px}
+.g-btn:hover{border-color:var(--orange);color:var(--orange)}
+.g-btn.roar{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.g-btn.roar:hover{background:var(--bone);border-color:var(--bone);color:var(--ink)}
+.g-btn[disabled]{opacity:.45;cursor:default}
+.g-btn.live{opacity:1}
+.g-btn.live svg{animation:gPulse 600ms var(--ease-std) infinite alternate}
+@keyframes gPulse{to{scale:1.2}}
+.studio-ur{font-size:clamp(17px,1.4vw,20px);color:var(--violet-100);margin:24px 0 0}
+
+/* ── PRICING ── */
+.tiers{display:grid;gap:16px}
+@media (min-width:900px){.tiers{grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}}
+.tier{position:relative;display:flex;flex-direction:column;padding:clamp(28px,3vw,48px);background:var(--ink-2);border:1px solid rgba(172,144,186,.2);border-radius:28px;overflow:hidden;isolation:isolate}
+.tier::after{content:"";position:absolute;right:0;bottom:0;width:160px;height:160px;z-index:-1;background:var(--orange);opacity:.14;border-radius:100% 0 0 0;transform:scale(0);transform-origin:bottom right;transition:transform 400ms var(--ease-brand)}
+.tier:hover::after{transform:none}
+.tier.feature{background:var(--violet-700);border:2px solid var(--orange)}
+.tier .tag{position:absolute;top:24px;right:24px;padding:8px 14px;border-radius:999px;background:var(--orange);color:var(--ink);font:600 11.5px/1 Archivo,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.tier .name{color:var(--ash)}
+.tier .price{margin:16px 0 4px;font:800 clamp(48px,5vw,80px)/1 Unbounded,sans-serif;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.tier .pkr{color:var(--ash);font-size:14px}
+.tier .who{margin:16px 0 24px;color:var(--bone-300)}
+.tier ul{list-style:none;margin:0 0 32px;padding:0;flex:1}
+.tier li{padding:12px 0;border-top:1px solid rgba(172,144,186,.2);font-size:16px}
+.tier .btn{align-self:flex-start}
+.note{margin:32px 0 0;color:var(--ash);font-size:15px;max-width:72ch}
+
+/* ── TESTIMONIALS ── */
+.quotes{display:grid;gap:16px}
+@media (min-width:900px){.quotes{grid-template-columns:1fr 1fr;gap:24px}}
+.quote{position:relative;margin:0;padding:clamp(28px,3vw,48px);background:var(--violet-700);border-radius:28px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-height:300px}
+.quote blockquote{margin:0;font:500 clamp(19px,1.6vw,24px)/1.5 Archivo,sans-serif;letter-spacing:-.005em}
+.quote figcaption{display:flex;align-items:center;gap:16px}
+.quote .st{width:14px;height:40px;border-radius:999px;background:var(--orange);flex:0 0 auto}
+.quote:nth-child(even) .st{background:var(--violet-100)}
+.quote b{display:block;font:600 16px/1.3 Archivo,sans-serif}
+.quote figcaption span span{display:block;font-size:14px;color:var(--violet-100)}
+
+/* ── WHY ── */
+.why{display:grid;gap:0;border-top:1px solid rgba(14,14,14,.16)}
+@media (min-width:800px){.why{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.why{grid-template-columns:repeat(4,1fr)}}
+.why-item{padding:32px 24px 40px 0;border-bottom:1px solid rgba(14,14,14,.16)}
+@media (min-width:800px){.why-item{padding:32px 32px 48px 0}}
+.why-item i{display:block;width:36px;height:6px;background:var(--orange);margin-bottom:24px}
+.why-item h3{margin:0 0 8px;font:600 20px/1.3 Archivo,sans-serif}
+.why-item p{margin:0;color:#5d5b52;font-size:16px}
+
+/* ── CONTACT ── */
+#contact .kin{font:800 clamp(52px,12vw,200px)/.88 Unbounded,sans-serif;letter-spacing:-.045em;margin:0 0 clamp(56px,7vw,112px)}
+.c-grid{display:grid;gap:64px}
+@media (min-width:1000px){.c-grid{grid-template-columns:5fr 7fr;gap:96px}}
+.c-row{display:flex;align-items:center;gap:16px;padding:18px 0;border-top:1px solid rgba(172,144,186,.2)}
+.c-row .gl{width:40px;height:40px;flex:0 0 auto;display:grid;place-items:center;border:1px solid rgba(243,240,219,.24);border-radius:999px}
+.c-row .gl i{display:block;background:var(--orange)}
+.c-row b{display:block;font:500 12px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);margin-bottom:6px}
+.c-row a,.c-row span.v{font-size:17px;color:var(--bone)}
+.c-row a:hover{color:var(--orange)}
+.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.socials a{width:46px;height:46px;display:grid;place-items:center;border-radius:999px;border:1px solid rgba(243,240,219,.24);color:var(--bone);transition:background var(--t-micro) var(--ease-std),color var(--t-micro) var(--ease-std),border-color var(--t-micro) var(--ease-std)}
+.socials a:hover{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.socials svg{width:18px;height:18px;fill:currentColor}
+form{display:grid;gap:16px}
+.f-row{display:grid;gap:16px}
+@media (min-width:640px){.f-row{grid-template-columns:1fr 1fr}}
+.field label{display:block;margin-bottom:8px;font:500 12px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);transition:color var(--t-ui) var(--ease-std)}
+.field input,.field select,.field textarea{width:100%;min-height:56px;padding:16px;background:var(--ink-2);border:1px solid rgba(172,144,186,.24);border-radius:14px;color:var(--bone);font-size:16px;appearance:none;-webkit-appearance:none;transition:border-color var(--t-ui) var(--ease-std),box-shadow var(--t-ui) var(--ease-std)}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--orange) 50%),linear-gradient(135deg,var(--orange) 50%,transparent 50%);background-position:calc(100% - 22px) 25px,calc(100% - 16px) 25px;background-size:6px 6px;background-repeat:no-repeat}
+.field select option{background:var(--ink-2)}
+.field textarea{min-height:140px;resize:vertical}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:rgba(243,240,219,.36)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(242,144,69,.2)}
+.field:focus-within label{color:var(--orange)}
+.field input:-webkit-autofill{-webkit-text-fill-color:var(--bone);-webkit-box-shadow:0 0 0 1000px var(--ink-2) inset}
+.field .err{display:none;margin-top:8px;font-size:14px;color:var(--orange)}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--orange)}
+.field.invalid .err{display:block}
+#success{display:none;padding:24px;border-radius:14px;background:var(--orange);color:var(--ink);clip-path:inset(0 100% 0 0);transition:clip-path 400ms var(--ease-brand)}
+#success.show{display:block}#success.wipe{clip-path:inset(0)}
+#success b{display:block;font:600 19px/1.4 Archivo,sans-serif}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.tel-row{display:flex;gap:8px}
+.cc{position:relative;flex:0 0 auto}
+.cc-btn{height:100%;min-height:56px;display:flex;align-items:center;gap:9px;padding:0 14px;background:var(--ink-2);border:1px solid rgba(172,144,186,.24);border-radius:14px;cursor:pointer}
+.cc-btn:focus-visible,.cc.open .cc-btn{border-color:var(--orange);outline:none;box-shadow:0 0 0 3px rgba(242,144,69,.2)}
+.cc-flag{width:22px;height:16px;object-fit:cover;border-radius:2px;flex:0 0 auto}
+.cc-caret{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--orange);transition:transform var(--t-ui) var(--ease-std)}
+.cc.open .cc-caret{transform:rotate(180deg)}
+.cc-pop{position:absolute;z-index:60;top:calc(100% + 6px);left:0;width:300px;max-width:calc(100vw - 40px);background:var(--ink-2);border:1px solid var(--orange);border-radius:14px;overflow:hidden}
+.cc-search{width:100%;min-height:46px;padding:12px 14px;border:0;border-bottom:1px solid rgba(172,144,186,.24);background:var(--ink-3);font-size:16px}
+.cc-search:focus{outline:none}
+.cc-list{list-style:none;margin:0;padding:6px 0;max-height:260px;overflow:auto;overscroll-behavior:contain}
+.cc-list li{display:flex;align-items:center;gap:11px;padding:10px 14px;cursor:pointer;font-size:15px}
+.cc-list li .cc-n{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cc-list li .cc-d{color:var(--ash);font-variant-numeric:tabular-nums}
+.cc-list li.on,.cc-list li:hover{background:var(--violet-700)}
+.cc-list li[aria-selected="true"] .cc-n{color:var(--orange)}
+.cc-list .cc-sep{height:1px;padding:0;margin:6px 14px;background:rgba(172,144,186,.24);pointer-events:none}
+.cc-list .cc-none{color:var(--ash);cursor:default}
+
+/* ── FOOTER ── the sign-off: wordmark sits on the baseline ── */
+footer{background:var(--violet);color:var(--bone);padding:var(--sec) 0 calc(24px + env(safe-area-inset-bottom));overflow:hidden}
+.f-top{display:grid;gap:48px;margin-bottom:clamp(64px,8vw,128px)}
+@media (min-width:900px){.f-top{grid-template-columns:5fr 2fr 3fr 2fr}}
+.f-line{font:800 clamp(28px,3vw,44px)/1.05 Unbounded,sans-serif;letter-spacing:-.03em;margin:0 0 16px}
+.f-top .urdu-d{font-size:clamp(28px,3vw,44px)}
+.f-top h4{margin:0 0 16px;color:var(--violet-100);font:500 12px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.f-top ul{list-style:none;margin:0;padding:0}
+.f-top li{padding:5px 0;color:var(--bone-300)}
+.f-top li a{display:inline-block;padding:4px 0}
+.f-top li a:hover{color:var(--orange)}
+.wm-foot{width:100%;height:auto;color:var(--bone)}
+.f-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(243,240,219,.16);color:var(--violet-100);font-size:14px}
+
+/* ── REDUCED MOTION — final states, no animation ── */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- shared defs: the wordmark, drawn once from the brand book construction
+     (cap height 120, stem 22, stadium bowls, closed G, V on the baseline) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <mask id="gv-gcut" maskUnits="userSpaceOnUse" x="0" y="0" width="72" height="120"><rect width="72" height="120" fill="#fff"/><rect x="48" y="42" width="26" height="16" fill="#000"/></mask>
+    <symbol id="gv-wm" viewBox="0 0 424 120">
+      <path mask="url(#gv-gcut)" fill-rule="evenodd" d="M0,36A36,36 0 0 1 72,36V84A36,36 0 0 1 0,84Z M22,36A14,14 0 0 1 50,36V84A14,14 0 0 1 22,84Z"/><rect x="36" y="58" width="36" height="16"/>
+      <path fill-rule="evenodd" d="M86,36A36,36 0 0 1 158,36V84A36,36 0 0 1 86,84Z M108,36A14,14 0 0 1 136,36V84A14,14 0 0 1 108,84Z"/>
+      <path fill-rule="evenodd" d="M172,36A36,36 0 0 1 244,36V84A36,36 0 0 1 172,84Z M194,36A14,14 0 0 1 222,36V84A14,14 0 0 1 194,84Z"/>
+      <path d="M258,0H282L298,80L314,0H338L311,120H285Z"/>
+      <path fill-rule="evenodd" d="M352,36A36,36 0 0 1 424,36V84A36,36 0 0 1 352,84Z M374,36A14,14 0 0 1 402,36V84A14,14 0 0 1 374,84Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<header id="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="#hero" aria-label="Goovo Studios, home"><svg viewBox="0 0 424 120" class="wm" aria-hidden="true"><use href="#gv-wm"/></svg></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Studio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-o nav-cta" href="#contact">Start a project</a>
+    <button id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+  <div id="progress"></div>
+</header>
+
+<div id="menu" aria-label="Menu">
+  <a class="mi" href="#work">Work</a>
+  <a class="mi" href="#services">Services</a>
+  <a class="mi" href="#about">Studio</a>
+  <a class="mi" href="#pricing">Pricing</a>
+  <a class="mi" href="#contact">Contact</a>
+  <div class="m-foot">
+    <a class="btn btn-o" href="#contact">Start a project</a>
+    <span class="urdu-d" lang="ur" style="font-size:34px">لاہور سے</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- HERO — the wordmark builds on the brand timing: G stem from below,
+     O O wipe in, V drops onto the baseline, tagline settles -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="hero-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <i class="hero-edge" aria-hidden="true"></i>
+  <span class="scroll-cue cap" aria-hidden="true">Scroll — Lahore · 31.5° N</span>
+  <div class="wrap hero-inner">
+    <div class="hero-meta cap" data-intro><span>Creative studio · Lahore, Pakistan</span><span>Est. 2024 · Clients in six countries</span></div>
+    <h1 class="hero-h1" id="hero-title">
+      <span class="sr-only">Goovo Studios. Loud on purpose.</span>
+      <span class="wm-clip" style="display:block">
+        <svg class="wm wm-hero" viewBox="0 0 424 120" aria-hidden="true" focusable="false">
+          <g class="l l-g"><path mask="url(#gv-gcut)" fill-rule="evenodd" d="M0,36A36,36 0 0 1 72,36V84A36,36 0 0 1 0,84Z M22,36A14,14 0 0 1 50,36V84A14,14 0 0 1 22,84Z"/><rect x="36" y="58" width="36" height="16"/></g>
+          <g class="l l-o1"><path fill-rule="evenodd" d="M86,36A36,36 0 0 1 158,36V84A36,36 0 0 1 86,84Z M108,36A14,14 0 0 1 136,36V84A14,14 0 0 1 108,84Z"/></g>
+          <g class="l l-o2"><path fill-rule="evenodd" d="M172,36A36,36 0 0 1 244,36V84A36,36 0 0 1 172,84Z M194,36A14,14 0 0 1 222,36V84A14,14 0 0 1 194,84Z"/></g>
+          <g class="l l-v"><path d="M258,0H282L298,80L314,0H338L311,120H285Z"/></g>
+          <g class="l l-o3"><path fill-rule="evenodd" d="M352,36A36,36 0 0 1 424,36V84A36,36 0 0 1 352,84Z M374,36A14,14 0 0 1 402,36V84A14,14 0 0 1 374,84Z"/></g>
+        </svg>
+      </span>
+    </h1>
+    <div class="hero-row">
+      <p class="hero-tag" data-intro><span class="en">Loud On Purpose</span><span class="urdu-d" lang="ur">جان بوجھ کر بلند</span></p>
+      <p class="hero-sub" data-intro>Branding, motion, and web out of Lahore, for clients in six countries. AI is in the process, not in the credit line. Craft decides the outcome.</p>
+      <div class="hero-cta" data-intro>
+        <a class="btn btn-o" href="#work">See the work<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h9M8 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-line" href="#contact">Start a project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL — the O's counter opens onto the work -->
+<section id="portal" aria-labelledby="portal-title">
+  <div class="portal-pin">
+    <h2 id="portal-title" class="sr-only">We make brands people stop for.</h2>
+    <span class="ph ph-a" aria-hidden="true">We make brands</span>
+    <div class="portal-win">
+      <div class="pw-cols" aria-hidden="true">
+        <div class="pw-col">
+          <figure class="mt" style="--pb:#E13B2F;--pf:#FCC103"><img src="work/chomp.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Chomp</span></figure>
+          <figure class="mt" style="--pb:#1F4D3A;--pf:#F1E6CF"><img src="work/platform-7.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Platform 7</span></figure>
+          <figure class="mt" style="--pb:#611216;--pf:#C38C7D"><img src="work/purwah.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Purwah</span></figure>
+        </div>
+        <div class="pw-col">
+          <figure class="mt" style="--pb:#0E0E0E;--pf:#E20004"><img src="work/dos.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">DOS</span></figure>
+          <figure class="mt" style="--pb:#C8102E;--pf:#F4E7C8"><img src="work/nashta-talkies.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Nashta Talkies</span></figure>
+          <figure class="mt" style="--pb:#A3301E;--pf:#F6E7CF"><img src="work/thicc-patty.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Thicc Patty</span></figure>
+          <figure class="mt" style="--pb:#3B1450;--pf:#F29045"><img src="work/fytro.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Fytro</span></figure>
+        </div>
+        <div class="pw-col">
+          <figure class="mt" style="--pb:#0D0D0D;--pf:#F2601E"><img src="work/raptors-grill.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Raptor's Grill</span></figure>
+          <figure class="mt" style="--pb:#0B0B0F;--pf:#FF2E1F"><img src="work/dispatch-skool.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Dispatch Skool</span></figure>
+          <figure class="mt" style="--pb:#0E0E0E;--pf:#C6FF00"><img src="work/fytro.jpg" alt="" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Fytro</span></figure>
+        </div>
+      </div>
+      <div class="pw-cap">
+        <p class="d-m" style="margin:0">Nine brands. One studio.</p>
+        <a class="btn btn-o" href="#work">See the work<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h9M8 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+    <span class="ph ph-b" aria-hidden="true">people stop for.</span>
+  </div>
+</section>
+
+<!-- STUDIO / MANIFESTO -->
+<section class="sec on-bone" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="label"><i></i><span class="cap">02 · Who we are</span></div>
+    <h2 class="big" id="about-title" data-split>Brands that refuse to blend in.</h2>
+    <div class="about-grid">
+      <p class="manifesto" data-ink>Pakistan's AI-driven creative studio. We build identities that hold their edge in any market. AI is in the process, not in the credit line. Every frame is art-directed and finished by hand. Craft decides the outcome.</p>
+      <table class="are" data-rev>
+        <thead><tr><th scope="col">We are</th><th scope="col">We are not</th></tr></thead>
+        <tbody>
+          <tr><td>Direct</td><td>Blunt</td></tr>
+          <tr><td>Loud on purpose</td><td>Loud by accident</td></tr>
+          <tr><td>Precise</td><td>Precious</td></tr>
+          <tr><td>Warm</td><td>Folkloric</td></tr>
+          <tr><td>Lahore-based, globally judged</td><td>Selling the postcode</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stats" data-rev-group>
+      <div><b>Six</b><span class="cap muted">People</span></div>
+      <div><b>One</b><span class="cap muted">Studio</span></div>
+      <div><b>Lahore</b><span class="cap muted">Since 2024</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec on-ink" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label"><i></i><span class="cap">03 · What we do</span></div>
+        <h2 class="d-l" id="services-title" data-split>Six disciplines, one system.</h2>
+      </div>
+      <p class="lead muted" data-rev>Every engagement runs on the same design system, so the work stays consistent whether it lands on a shelf, a feed, or a screen.</p>
+    </div>
+    <div class="srows" data-rev-group>
+      <div class="srow"><span class="sn">01</span><h3>Branding &amp; Identity</h3><p>Naming, logo systems, guidelines, and packaging built to survive every supplier.</p><svg class="mod" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="14" y="2" width="28" height="52" rx="14" fill="#F29045"/></svg></div>
+      <div class="srow"><span class="sn">02</span><h3>Motion Graphics</h3><p>Stings, reels, title design, and brand films that arrive on the grid and stop with intent.</p><svg class="mod" viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M54 54H4A50 50 0 0 1 54 4Z" fill="#F3F0DB"/></svg></div>
+      <div class="srow"><span class="sn">03</span><h3>Social Media Design</h3><p>Post systems, templates, and campaign creative that holds a grid instead of fighting it.</p><svg class="mod" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="2" y="22" width="52" height="12" fill="#F3F0DB"/></svg></div>
+      <div class="srow"><span class="sn">04</span><h3>Web Design (UI/UX)</h3><p>Interfaces and sites built on a real design system, handed over documented.</p><svg class="mod" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="2" y="4" width="8" height="48" fill="#5E2A78"/><rect x="14" y="4" width="8" height="48" fill="#5E2A78"/><rect x="26" y="4" width="8" height="48" fill="#F29045"/><rect x="38" y="4" width="8" height="48" fill="#5E2A78"/></svg></div>
+      <div class="srow"><span class="sn">05</span><h3>AI Creative Direction</h3><p>Art-directed imagery and concepts. One idea per frame, lit on purpose, finished by hand.</p><svg class="mod" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="14" y="2" width="28" height="52" rx="14" fill="#F3F0DB"/></svg></div>
+      <div class="srow"><span class="sn">06</span><h3>Music &amp; Sound</h3><p>Original composition, jingles, and sound design cut to the edit, not laid over it.</p><svg class="mod" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="2" y="16" width="10" height="24" rx="5" fill="#5E2A78"/><rect x="16" y="6" width="10" height="44" rx="5" fill="#F29045"/><rect x="30" y="12" width="10" height="32" rx="5" fill="#5E2A78"/><rect x="44" y="20" width="10" height="16" rx="5" fill="#5E2A78"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK — case strip; pinned horizontal run on large screens -->
+<section id="work" aria-labelledby="work-title">
+  <div class="work-inner">
+    <div class="wrap work-head">
+      <div>
+        <div class="label"><i></i><span class="cap">04 · Selected work</span></div>
+        <h2 class="d-l" id="work-title" data-split>The work speaks first.</h2>
+      </div>
+      <a class="btn btn-line" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener">All case studies on Behance</a>
+    </div>
+    <div class="work-track">
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="CHOMP, smash burgers, Lahore. Case study on Behance">
+        <figure class="mt" style="--pb:#E13B2F;--pf:#FCC103"><img src="work/chomp.jpg" alt="CHOMP brand identity" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">CHOMP</span></figure>
+        <div class="wmeta"><span class="n">01</span><h3>CHOMP</h3><p>A loud smash-burger identity: mark, colour and campaign visuals built to stop a scrolling thumb.</p><div class="wtags"><span>Identity</span><span>Campaign</span></div></div>
+      </a>
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="DOS, streetwear. Case study on Behance">
+        <figure class="mt" style="--pb:#0E0E0E;--pf:#E20004"><img src="work/dos.jpg" alt="DOS brand identity" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">DOS</span></figure>
+        <div class="wmeta"><span class="n">02</span><h3>DOS</h3><p>Pakistani streetwear with attitude. Identity, campaign imagery and an app interface on one system.</p><div class="wtags"><span>Identity</span><span>Campaign</span><span>App UI</span></div></div>
+      </a>
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Fytro, premium fitness. Case study on Behance">
+        <figure class="mt" style="--pb:#0E0E0E;--pf:#C6FF00"><img src="work/fytro.jpg" alt="Fytro brand identity" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Fytro</span></figure>
+        <div class="wmeta"><span class="n">03</span><h3>Fytro</h3><p>A premium fitness brand built on performance and restraint, from the mark to the full brand book.</p><div class="wtags"><span>Identity</span><span>Brand book</span></div></div>
+      </a>
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Raptor's Grill, prehistoric grill house. Case study on Behance">
+        <figure class="mt" style="--pb:#0D0D0D;--pf:#F2601E"><img src="work/raptors-grill.jpg" alt="Raptor's Grill brand identity" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Raptor's Grill</span></figure>
+        <div class="wmeta"><span class="n">04</span><h3>Raptor's Grill</h3><p>A prehistoric grill house: a full theme-restaurant identity, from the mark to the world around the menu.</p><div class="wtags"><span>Identity</span><span>Theme brand</span></div></div>
+      </a>
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Purwah, women's ready-to-wear. Case study on Behance">
+        <figure class="mt" style="--pb:#611216;--pf:#C38C7D"><img src="work/purwah.jpg" alt="Purwah campaign visuals" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Purwah</span></figure>
+        <div class="wmeta"><span class="n">05</span><h3>Purwah</h3><p>Women's ready-to-wear. Catalogue and campaign visuals, art-directed and finished by hand.</p><div class="wtags"><span>Campaign</span><span>AI visuals</span></div></div>
+      </a>
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Platform 7, railway-station café. Case study on Behance">
+        <figure class="mt" style="--pb:#1F4D3A;--pf:#F1E6CF"><img src="work/platform-7.jpg" alt="Platform 7 brand identity" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Platform 7</span></figure>
+        <div class="wmeta"><span class="n">06</span><h3>Platform 7</h3><p>Railway-station café.</p><div class="wtags"><span>Identity</span></div></div>
+      </a>
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Nashta Talkies, Lollywood breakfast diner. Case study on Behance">
+        <figure class="mt" style="--pb:#C8102E;--pf:#F4E7C8"><img src="work/nashta-talkies.jpg" alt="Nashta Talkies brand identity" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Nashta Talkies</span></figure>
+        <div class="wmeta"><span class="n">07</span><h3>Nashta Talkies</h3><p>Lollywood breakfast diner.</p><div class="wtags"><span>Identity</span></div></div>
+      </a>
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Dispatch Skool, freight SaaS. Case study on Behance">
+        <figure class="mt" style="--pb:#0B0B0F;--pf:#FF2E1F"><img src="work/dispatch-skool.jpg" alt="Dispatch Skool brand identity" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Dispatch Skool</span></figure>
+        <div class="wmeta"><span class="n">08</span><h3>Dispatch Skool</h3><p>Freight SaaS.</p><div class="wtags"><span>Identity</span><span>B2B</span></div></div>
+      </a>
+      <a class="wcard" href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Thicc Patty, burger joint. Case study on Behance">
+        <figure class="mt" style="--pb:#A3301E;--pf:#F6E7CF"><img src="work/thicc-patty.jpg" alt="Thicc Patty brand identity" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fb">Thicc Patty</span></figure>
+        <div class="wmeta"><span class="n">09</span><h3>Thicc Patty</h3><p>Burger joint.</p><div class="wtags"><span>Identity</span></div></div>
+      </a>
+      <div class="wend">
+        <p class="h3" style="margin:0">Your brand next.</p>
+        <span class="urdu-d on-orange" lang="ur">آپ کی باری</span>
+        <a class="btn btn-line" href="#contact">Start a project</a>
+      </div>
+    </div>
+    <div class="wrap work-rail" aria-hidden="true"><div class="rail"><i></i></div><span class="count">01 / 09</span></div>
+  </div>
+</section>
+
+<!-- INDEX — more from the studio, preview follows the pointer -->
+<section class="sec on-ink" id="index" aria-labelledby="index-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label"><i></i><span class="cap">05 · Index</span></div>
+        <h2 class="d-m" id="index-title" data-split>More from the studio.</h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects" data-rev>
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All work</button>
+        <button class="filter" type="button" data-filter="branding" aria-pressed="false">Branding</button>
+        <button class="filter" type="button" data-filter="social" aria-pressed="false">Social</button>
+        <button class="filter" type="button" data-filter="video" aria-pressed="false">Video</button>
+        <button class="filter" type="button" data-filter="uiux" aria-pressed="false">UI/UX</button>
+      </div>
+    </div>
+    <ul class="idx" data-rev-group>
+      <li data-cat="branding" data-pb="#3B1450" data-pf="#F29045"><span class="n">01</span><span class="t">Chomp Burger</span><span class="k">Branding &amp; Identity</span></li>
+      <li data-cat="branding" data-pb="#C8102E" data-pf="#F4E7C8"><span class="n">02</span><span class="t">Nashta Talkies</span><span class="k">Brand Identity System</span></li>
+      <li data-cat="branding" data-pb="#0E0E0E" data-pf="#E20004"><span class="n">03</span><span class="t">DOS Clothing</span><span class="k">Brand Identity</span></li>
+      <li data-cat="branding" data-pb="#2A0E37" data-pf="#F3F0DB"><span class="n">04</span><span class="t">GENZ Studios</span><span class="k">Perfume Branding</span></li>
+      <li data-cat="social" data-pb="#F29045" data-pf="#0E0E0E"><span class="n">05</span><span class="t">Asian Street Eats</span><span class="k">Social Media System</span></li>
+      <li data-cat="branding" data-pb="#0B0B0F" data-pf="#FF2E1F"><span class="n">06</span><span class="t">Dispatch Skool</span><span class="k">B2B SaaS Branding</span></li>
+      <li data-cat="uiux" data-pb="#0E0E0E" data-pf="#F3F0DB"><span class="n">07</span><span class="t">Games List App</span><span class="k">UI/UX</span></li>
+      <li data-cat="video" data-pb="#2A0E37" data-pf="#AC90BA"><span class="n">08</span><span class="t">Atelier Charisma</span><span class="k">AI Product Visuals</span></li>
+      <li data-cat="video" data-pb="#F29045" data-pf="#3B1450"><span class="n">09</span><span class="t">Motion Reel 2026</span><span class="k">Motion Graphics</span></li>
+      <li data-cat="social" data-pb="#0E0E0E" data-pf="#F29045"><span class="n">10</span><span class="t">Shahi Drink</span><span class="k">Social Media Design</span></li>
+      <li data-cat="branding" data-pb="#3B1450" data-pf="#F3F0DB"><span class="n">11</span><span class="t">Zavina</span><span class="k">Brand Identity</span></li>
+      <li data-cat="branding social" data-pb="#E3DFC4" data-pf="#0E0E0E"><span class="n">12</span><span class="t">Buzz Brand</span><span class="k">Branding &amp; Social</span></li>
+      <li data-cat="uiux" data-pb="#F29045" data-pf="#0E0E0E"><span class="n">13</span><span class="t">Chill Bliss</span><span class="k">Website UI</span></li>
+      <li data-cat="branding" data-pb="#0E0E0E" data-pf="#AC90BA"><span class="n">14</span><span class="t">Mir Beats</span><span class="k">Cover Art System</span></li>
+      <li data-cat="branding" data-pb="#2A0E37" data-pf="#F29045"><span class="n">15</span><span class="t">Wajd Sound</span><span class="k">Visual Identity</span></li>
+      <li data-cat="branding" data-pb="#E3DFC4" data-pf="#3B1450"><span class="n">16</span><span class="t">Café Lahore</span><span class="k">Identity &amp; Signage</span></li>
+      <li data-cat="social" data-pb="#F29045" data-pf="#2A0E37"><span class="n">17</span><span class="t">Launch Campaign</span><span class="k">Ad Creative</span></li>
+      <li data-cat="video" data-pb="#0E0E0E" data-pf="#F3F0DB"><span class="n">18</span><span class="t">Studio Reel</span><span class="k">Title Design</span></li>
+      <li class="end" data-cat="all"><span class="n">19</span><a class="t" href="#contact">Your brand next.</a><span class="k">Two weeks from brief to launch</span></li>
+    </ul>
+  </div>
+  <div id="prev" aria-hidden="true"><figure class="mt noimg"><span class="fb"></span></figure></div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec on-bone" id="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label"><i></i><span class="cap">06 · How we work</span></div>
+        <h2 class="d-l" id="process-title" data-split>Five steps. No surprises.</h2>
+      </div>
+      <p class="lead muted" data-rev>Fixed scope, fixed price, named rounds. You always know which step you are on and what lands next.</p>
+    </div>
+    <ol class="steps">
+      <li class="step on"><i class="bar"></i><b>01</b><h3>Consultation</h3><p>One call. We learn the market, the customer, and what the brand has to beat.</p></li>
+      <li class="step"><i class="bar"></i><b>02</b><h3>Planning</h3><p>Scope, timeline, and deliverables written down before any design starts.</p></li>
+      <li class="step"><i class="bar"></i><b>03</b><h3>Design &amp; Development</h3><p>The system gets built: marks, palette, type, and the templates that carry them.</p></li>
+      <li class="step"><i class="bar"></i><b>04</b><h3>Revisions</h3><p>Named rounds against the brief. Feedback in one place, changes in one pass.</p></li>
+      <li class="step"><i class="bar"></i><b>05</b><h3>Delivery</h3><p>Every file, every format, documented. You own it outright on handover.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- STUDIO CHARACTER — Goava -->
+<section class="sec" id="studio" aria-labelledby="studio-title">
+  <div class="wrap studio-grid">
+    <div>
+      <div class="label"><i></i><span class="cap">07 · Studio culture</span></div>
+      <h2 class="d-l" id="studio-title" data-split>Meet Goava.</h2>
+      <p class="lead muted" style="margin-top:24px" data-rev>The studio has one character. He lives on our socials, in our motion, and on the merch. He stays out of your proposal.</p>
+      <p class="studio-ur urdu" lang="ur" dir="rtl" data-rev>لاہور میں بنایا گیا</p>
+      <div class="goava-ctl" role="group" aria-label="Play with Goava, our lion" data-rev>
+        <button type="button" class="g-btn roar" data-act="roar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6M8 6v12M12 3v18M16 7v10M20 10v4"/></svg>Make him roar</button>
+        <button type="button" class="g-btn" data-act="laugh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7.5 13.5a4.5 4.5 0 0 0 9 0z"/></svg>Make him laugh</button>
+        <button type="button" class="g-btn" data-act="dance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.8 4.9L17.7 9.7l-4.9 1.8L11 16.4l-1.8-4.9L4.3 9.7l4.9-1.8z"/></svg>Make him dance</button>
+      </div>
+    </div>
+    <div class="goava" id="goava">
+      <img class="g-poster" src="goava/poster-v6.jpg" alt="Goava, the Goovo Studios lion, in a cream puffer jacket" width="800" height="720" loading="lazy" decoding="async">
+      <video class="g-idle" data-src="goava/idle-v6.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <video class="g-act" data-act="roar" src="goava/roar-v6.mp4" playsinline preload="none" aria-hidden="true"></video>
+      <video class="g-act" data-act="laugh" src="goava/laugh-v6.mp4" playsinline preload="none" aria-hidden="true"></video>
+      <video class="g-act" data-act="dance" src="goava/dance-v6.mp4" playsinline preload="none" aria-hidden="true"></video>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec on-ink" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label"><i></i><span class="cap">08 · Pricing</span></div>
+        <h2 class="d-l" id="pricing-title" data-split>Three tiers. Fixed prices.</h2>
+      </div>
+      <p class="lead muted" data-rev>Project-based, quoted in USD. Branding is in every tier. It was never an add-on.</p>
+    </div>
+    <div class="tiers" data-rev-group>
+      <article class="tier">
+        <span class="cap name">Starter</span>
+        <div class="price" data-count="200">$200</div>
+        <span class="pkr">approx. PKR 56,000</span>
+        <p class="who">Logo, colour, type. Two rounds. Ten days.</p>
+        <ul><li>Logo, colour, and type</li><li>Two rounds of revisions</li><li>Ten working days</li><li>Brand sheet delivered</li></ul>
+        <a class="btn btn-line" href="#contact" data-budget="$200 Starter">Start with Starter</a>
+      </article>
+      <article class="tier feature">
+        <span class="tag">Most chosen</span>
+        <span class="cap name">Studio</span>
+        <div class="price" data-count="400">$400</div>
+        <span class="pkr">approx. PKR 112,000</span>
+        <p class="who">Full identity, social system, one-page site. Three rounds.</p>
+        <ul><li>Full identity system</li><li>Social template system</li><li>One-page website</li><li>Three rounds of revisions</li></ul>
+        <a class="btn btn-o" href="#contact" data-budget="$400 Studio">Start with Studio</a>
+      </article>
+      <article class="tier">
+        <span class="cap name">Full brand</span>
+        <div class="price" data-count="600">$600</div>
+        <span class="pkr">approx. PKR 168,000</span>
+        <p class="who">Identity, motion, web, brand book. Unlimited rounds within scope.</p>
+        <ul><li>Identity, motion, and web</li><li>Complete brand book</li><li>Unlimited rounds within scope</li><li>Launch support</li></ul>
+        <a class="btn btn-line" href="#contact" data-budget="$600 Full brand">Start with Full brand</a>
+      </article>
+    </div>
+    <p class="note" data-rev>PKR shown at the month's rate, for reference only. Fixed project pricing: no hourly billing, no surprise line items. Retainers are quoted after the first project.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec on-violet" id="testimonials" aria-labelledby="t-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label"><i></i><span class="cap">09 · After launch</span></div>
+        <h2 class="d-m" id="t-title" data-split>Here is what four clients said after launch.</h2>
+      </div>
+    </div>
+    <div class="quotes" data-rev-group>
+      <figure class="quote"><blockquote>“The mark works at every size we throw at it, from a shopfront to a 16px favicon. Our printer had no questions, which had never happened before.”</blockquote><figcaption><i class="st"></i><span><b>Ahmed Raza</b><span>Branding &amp; Design</span></span></figcaption></figure>
+      <figure class="quote"><blockquote>“They handed over a system, not a folder of screens. Our developer shipped the build in two weeks with no design questions.”</blockquote><figcaption><i class="st"></i><span><b>Sarah Khan</b><span>UX/UI &amp; Web</span></span></figcaption></figure>
+      <figure class="quote"><blockquote>“Six weeks of templates meant we stopped designing every post from scratch. Our grid finally looks like one brand.”</blockquote><figcaption><i class="st"></i><span><b>Muhammad Hassan</b><span>Social Media</span></span></figcaption></figure>
+      <figure class="quote"><blockquote>“The reel cut through on a feed full of noise. Watch-through more than doubled against the version we made in-house.”</blockquote><figcaption><i class="st"></i><span><b>Fatima Ali</b><span>Video Production</span></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec on-bone" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label"><i></i><span class="cap">10 · Why Goovo</span></div>
+        <h2 class="d-m" id="why-title" data-split>Four reasons clients stay.</h2>
+      </div>
+    </div>
+    <div class="why" data-rev-group>
+      <div class="why-item"><i></i><h3>Art-directed AI</h3><p>Not prompt-and-ship. Every frame is briefed, lit, composited, and graded before it leaves.</p></div>
+      <div class="why-item"><i></i><h3>Systems, not one-off files</h3><p>You get rules and templates, so the brand still holds six months after we finish.</p></div>
+      <div class="why-item"><i></i><h3>Lahore rates, international standard</h3><p>The work is judged against London and Dubai studios. The invoice is not.</p></div>
+      <div class="why-item"><i></i><h3>One team, start to finish</h3><p>Six people. No account layer, no handoff to a junior after the pitch.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec on-ink" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="label"><i></i><span class="cap">11 · Start a project</span></div>
+    <h2 class="kin" id="contact-title" data-split>Your brand <span class="o">next.</span></h2>
+    <div class="c-grid">
+      <div>
+        <p class="lead muted" data-rev>Tell us what the brand has to do. We reply within one working day with scope, price, and a date.</p>
+        <div data-rev style="margin-top:32px">
+          <div class="c-row"><span class="gl"><i style="width:12px;height:20px;border-radius:999px"></i></span><div><b>WhatsApp</b><a href="https://wa.me/923228738738">+92 322 873 8738</a></div></div>
+          <div class="c-row"><span class="gl"><i style="width:18px;height:6px"></i></span><div><b>Email</b><a href="mailto:hello@goovostudios.com">hello@goovostudios.com</a></div></div>
+          <div class="c-row"><span class="gl"><i style="width:14px;height:14px;border-radius:100% 0 0 0"></i></span><div><b>Instagram</b><a href="https://instagram.com/goovostudios" target="_blank" rel="noopener">@goovostudios</a></div></div>
+          <div class="c-row"><span class="gl"><i style="width:6px;height:18px"></i></span><div><b>Studio</b><span class="v">Lahore, Pakistan</span></div></div>
+          <div class="socials"><a href="https://www.instagram.com/goovostudios/" target="_blank" rel="noopener" aria-label="Goovo Studios on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a><a href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Goovo Studios on Behance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"/></svg></a><a href="https://dribbble.com/goovostudios" target="_blank" rel="noopener" aria-label="Goovo Studios on Dribbble"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/></svg></a><a href="https://www.linkedin.com/company/goovostudios/" target="_blank" rel="noopener" aria-label="Goovo Studios on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="https://www.facebook.com/Goovostudios/" target="_blank" rel="noopener" aria-label="Goovo Studios on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></div>
+        </div>
+      </div>
+      <div data-rev>
+        <form id="brief" novalidate>
+          <div class="f-row">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required><span class="err">Add your name.</span></div>
+            <div class="field"><label for="f-wa">WhatsApp</label><div class="tel-row"><div class="cc" id="cc">
+                <button type="button" class="cc-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code, Pakistan +92">
+                  <img class="cc-flag" src="https://flagcdn.com/w40/pk.png" srcset="https://flagcdn.com/w80/pk.png 2x" width="22" height="16" alt="">
+                  <span class="cc-code">+92</span><i class="cc-caret" aria-hidden="true"></i>
+                </button>
+                <div class="cc-pop" hidden>
+                  <input class="cc-search" type="text" placeholder="Search country or code" aria-label="Search country or code" autocomplete="off">
+                  <ul class="cc-list" role="listbox" aria-label="Country codes" data-lenis-prevent></ul>
+                </div>
+                <input type="hidden" name="cc" value="92">
+              </div><input id="f-wa" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="300 1234567" required></div><span class="err">Add a number we can reach.</span></div>
+          </div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err">Add an email we can reply to.</span></div>
+          <div class="f-row">
+            <div class="field"><label for="f-service">Service</label>
+              <select id="f-service" name="service" required>
+                <option value="">Select one</option>
+                <option>Branding &amp; Identity</option><option>Motion Graphics</option><option>Social Media Design</option>
+                <option>Web Design (UI/UX)</option><option>AI Creative Direction</option><option>Music &amp; Sound</option><option>Full brand</option>
+              </select><span class="err">Pick a service.</span>
+            </div>
+            <div class="field"><label for="f-budget">Budget</label>
+              <select id="f-budget" name="budget" required>
+                <option value="">Select one</option>
+                <option>$200 Starter</option><option>$400 Studio</option><option>$600 Full brand</option><option>Not sure yet</option>
+              </select><span class="err">Pick a budget.</span>
+            </div>
+          </div>
+          <div class="field"><label for="f-details">Project details</label><textarea id="f-details" name="details" required></textarea><span class="err">Tell us what the brand has to do.</span></div>
+          <button class="btn btn-o" type="submit" style="justify-self:start">Send the brief<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h9M8 4l4 4-4 4"/></svg></button>
+          <div id="success" role="status"><b>Brief received.</b><span>We reply within one working day, usually sooner.</span></div>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <p class="f-line">Loud on purpose.<br>Never by accident.</p>
+        <span class="urdu-d" lang="ur">جان بوجھ کر بلند</span>
+        <div class="socials"><a href="https://www.instagram.com/goovostudios/" target="_blank" rel="noopener" aria-label="Goovo Studios on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a><a href="https://www.behance.net/goovostudios" target="_blank" rel="noopener" aria-label="Goovo Studios on Behance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"/></svg></a><a href="https://dribbble.com/goovostudios" target="_blank" rel="noopener" aria-label="Goovo Studios on Dribbble"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/></svg></a><a href="https://www.linkedin.com/company/goovostudios/" target="_blank" rel="noopener" aria-label="Goovo Studios on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="https://www.facebook.com/Goovostudios/" target="_blank" rel="noopener" aria-label="Goovo Studios on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></div>
+      </div>
+      <div><h4>Navigate</h4><ul><li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#about">Studio</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li>Branding &amp; Identity</li><li>Motion Graphics</li><li>Social Media Design</li><li>Web Design (UI/UX)</li><li>AI Creative Direction</li><li>Music &amp; Sound</li></ul></div>
+      <div><h4>Contact</h4><ul>
+        <li><a href="https://wa.me/923228738738">+92 322 873 8738</a></li>
+        <li><a href="mailto:hello@goovostudios.com">hello@goovostudios.com</a></li>
+        <li>Lahore, Pakistan</li>
+      </ul></div>
+    </div>
+    <div class="wm-clip" aria-hidden="true">
+      <svg class="wm wm-foot" viewBox="0 0 424 120" focusable="false">
+        <g class="l"><path mask="url(#gv-gcut)" fill-rule="evenodd" d="M0,36A36,36 0 0 1 72,36V84A36,36 0 0 1 0,84Z M22,36A14,14 0 0 1 50,36V84A14,14 0 0 1 22,84Z"/><rect x="36" y="58" width="36" height="16"/></g>
+        <g class="l"><path fill-rule="evenodd" d="M86,36A36,36 0 0 1 158,36V84A36,36 0 0 1 86,84Z M108,36A14,14 0 0 1 136,36V84A14,14 0 0 1 108,84Z"/></g>
+        <g class="l"><path fill-rule="evenodd" d="M172,36A36,36 0 0 1 244,36V84A36,36 0 0 1 172,84Z M194,36A14,14 0 0 1 222,36V84A14,14 0 0 1 194,84Z"/></g>
+        <g class="l"><path d="M258,0H282L298,80L314,0H338L311,120H285Z"/></g>
+        <g class="l"><path fill-rule="evenodd" d="M352,36A36,36 0 0 1 424,36V84A36,36 0 0 1 352,84Z M374,36A14,14 0 0 1 402,36V84A14,14 0 0 1 374,84Z"/></g>
+      </svg>
+    </div>
+    <div class="f-bottom"><span>© <span id="yr">2026</span> Goovo Studios · Lahore, Pakistan</span><span>Six people. One studio. Lahore.</span></div>
+  </div>
+</footer>
+
+<div id="view" aria-hidden="true">View</div>
+
+<elevenlabs-convai agent-id="agent_4401kt6r1swdfsjrzv7rqtb1dzec" avatar-image-url="data:image/jpeg;base64,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"></elevenlabs-convai>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════════
+   GOOVO v13 — one smooth-scroll engine (Lenis) driving
+   GSAP ScrollTrigger. Under reduced motion neither Lenis nor
+   any scrubbed timeline is created; final states render.
+   ═══════════════════════════════════════════════════════════ */
+(function(){
+'use strict';
+var root = document.documentElement;
+var hasGsap = !!(window.gsap && window.ScrollTrigger);
+if (!hasGsap) root.classList.remove('motion');
+var motion = root.classList.contains('motion');
+var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+var $  = function(s, c){ return (c || document).querySelector(s); };
+var $$ = function(s, c){ return [].slice.call((c || document).querySelectorAll(s)); };
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* never leave the hero hidden, whatever fails below */
+var readyTimer = setTimeout(function(){ root.classList.add('ready'); }, 2500);
+
+/* ── SPLIT HEADINGS into masked words. The heading keeps its full
+   text as its accessible name; the word spans are decorative. ── */
+function splitWords(el){
+  el.setAttribute('aria-label', el.textContent.replace(/\s+/g, ' ').trim());
+  (function walk(node){
+    [].slice.call(node.childNodes).forEach(function(n){
+      if (n.nodeType === 3){
+        var parts = n.textContent.split(/(\s+)/), frag = document.createDocumentFragment();
+        parts.forEach(function(p){
+          if (!p) return;
+          if (/^\s+$/.test(p)){ frag.appendChild(document.createTextNode(' ')); return; }
+          var w = document.createElement('span'); w.className = 'w'; w.setAttribute('aria-hidden', 'true');
+          var i = document.createElement('span'); i.className = 'wi'; i.textContent = p;
+          w.appendChild(i); frag.appendChild(w);
+        });
+        n.parentNode.replaceChild(frag, n);
+      } else if (n.nodeType === 1 && n.tagName !== 'A'){
+        n.setAttribute('aria-hidden', 'true'); walk(n);
+      }
+    });
+  })(el);
+}
+
+/* ── NAV: stuck / hide on scroll down / progress ── */
+var nav = $('#nav'), prog = $('#progress'), lastY = 0;
+function onScroll(){
+  var y = window.scrollY, max = document.documentElement.scrollHeight - innerHeight;
+  nav.classList.toggle('stuck', y > 40);
+  nav.classList.toggle('hide', y > lastY && y > 400 && !menu.classList.contains('open'));
+  lastY = y;
+  prog.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+}
+var menu = $('#menu'), burger = $('#burger');
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* ── SMOOTH SCROLL ── */
+var lenis = null;
+if (motion){
+  gsap.registerPlugin(ScrollTrigger);
+  if (window.Lenis){
+    lenis = new Lenis({lerp:.1, wheelMultiplier:1, touchMultiplier:1.4});
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+}
+function goTo(target){
+  if (lenis) lenis.scrollTo(target, {offset:0, duration:1.2, easing:function(t){ return 1 - Math.pow(1 - t, 4); }});
+  else target.scrollIntoView({behavior: motion ? 'smooth' : 'auto'});
+}
+function toggleMenu(open){
+  menu.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  if (lenis){ open ? lenis.stop() : lenis.start(); }
+  if (open) nav.classList.remove('hide');
+}
+burger.addEventListener('click', function(){ toggleMenu(!menu.classList.contains('open')); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && menu.classList.contains('open')){ toggleMenu(false); burger.focus(); } });
+$$('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var id = a.getAttribute('href'); if (id.length < 2) return;
+    var t = document.querySelector(id); if (!t) return;
+    e.preventDefault();
+    if (menu.classList.contains('open')) toggleMenu(false);
+    if (a.dataset.budget){ var s = $('#f-budget'); if (s) s.value = a.dataset.budget; }
+    goTo(t);
+    history.replaceState(null, '', id);
+  });
+});
+
+/* ── SPLIT all display headings (visible text untouched without JS) ── */
+$$('[data-split]').forEach(splitWords);
+
+/* ── GOAVA — idle loop, roar / laugh / dance on click (frame-matched swaps) ── */
+(function(){
+  var box = $('#goava'); if (!box) return;
+  var sec = $('#studio');
+  var btns = $$('.g-btn[data-act]');
+  var idle = box.querySelector('.g-idle');
+  var vids = {}; $$('.g-act', box).forEach(function(v){ vids[v.dataset.act] = v; });
+  var live = null, inView = false, booted = false;
+  function playIdle(){ if (!motion || !inView || live || !booted) return; var p = idle.play(); if (p && p.catch) p.catch(function(){}); }
+  function onFrame(v, cb, noTimeout){
+    var done = false; function go(){ if (!done){ done = true; cb(); } }
+    if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(function(){ go(); });
+    else v.addEventListener('playing', function(){ requestAnimationFrame(function(){ requestAnimationFrame(go); }); }, {once:true});
+    if (!noTimeout) setTimeout(go, 1200);
+  }
+  function loadClips(){ for (var a in vids){ if (vids[a].preload !== 'auto'){ vids[a].preload = 'auto'; vids[a].load(); } } }
+  function boot(){
+    if (booted) return; booted = true;
+    if (motion){ idle.muted = true; idle.src = idle.dataset.src; idle.load(); onFrame(idle, function(){ box.classList.add('ready'); }, true); idle.addEventListener('canplay', playIdle); }
+    setTimeout(loadClips, 1500);
+  }
+  function resetUI(){ btns.forEach(function(b){ b.disabled = false; b.classList.remove('live'); }); }
+  function finish(){
+    var v = vids[live]; live = null; resetUI(); if (!v) return;
+    idle.pause();
+    var started = false;
+    function startIdle(){
+      if (started) return; started = true;
+      if (!motion){ v.classList.remove('on'); return; }
+      onFrame(idle, function(){ v.classList.remove('on'); });
+      var p = idle.play(); if (p && p.catch) p.catch(function(){ v.classList.remove('on'); });
+    }
+    idle.addEventListener('seeked', startIdle, {once:true});
+    try { idle.currentTime = 0; } catch(e){ startIdle(); }
+    setTimeout(startIdle, 500);
+  }
+  function abort(){ var v = vids[live]; live = null; resetUI(); if (v){ v.pause(); v.classList.remove('on'); } }
+  btns.forEach(function(b){
+    ['pointerenter','focus','touchstart'].forEach(function(ev){ b.addEventListener(ev, loadClips, {once:true, passive:true}); });
+    b.addEventListener('click', function(){
+      if (live) return;
+      var act = b.dataset.act, v = vids[act]; live = act;
+      btns.forEach(function(o){ o.disabled = true; }); b.classList.add('live');
+      if (v.preload !== 'auto') v.preload = 'auto';
+      try { v.currentTime = 0; } catch(e){}
+      v.muted = (act === 'dance');
+      onFrame(v, function(){ if (live !== act) return; v.classList.add('on'); idle.pause(); });
+      var p = v.play();
+      if (p && p.catch) p.catch(function(){ v.muted = true; v.play().catch(function(){ abort(); playIdle(); }); });
+    });
+  });
+  for (var a in vids){
+    vids[a].addEventListener('ended', function(){ if (this.dataset.act === live) finish(); });
+    vids[a].addEventListener('error', function(){ if (this.dataset.act === live){ abort(); playIdle(); } });
+  }
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){
+      inView = en[0].isIntersecting;
+      if (inView){ boot(); playIdle(); }
+      else { if (live) abort(); idle.pause(); }
+    }, {rootMargin:'200px 0px'}).observe(sec);
+  } else { inView = true; boot(); }
+  document.addEventListener('visibilitychange', function(){ if (document.hidden) idle.pause(); else playIdle(); });
+})();
+
+/* ── INDEX: filters + pointer preview ── */
+(function(){
+  var items = $$('.idx li'), btns = $$('.filter');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var f = b.dataset.filter;
+      btns.forEach(function(o){ o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+      items.forEach(function(li){
+        var cats = (li.dataset.cat || '').split(' ');
+        li.classList.toggle('dim', !(f === 'all' || li.classList.contains('end') || cats.indexOf(f) > -1));
+      });
+    });
+  });
+  var prev = $('#prev'); if (!prev || !fine || !hasGsap) return;
+  var fig = prev.querySelector('.mt'), fb = prev.querySelector('.fb');
+  var px = gsap.quickTo(prev, 'x', {duration:.5, ease:'power3.out'}), py = gsap.quickTo(prev, 'y', {duration:.5, ease:'power3.out'});
+  var list = $('.idx');
+  list.addEventListener('pointermove', function(e){ px(e.clientX); py(e.clientY); });
+  items.forEach(function(li){
+    if (li.classList.contains('end')) return;
+    li.addEventListener('pointerenter', function(){
+      if (li.classList.contains('dim')) return;
+      fig.style.setProperty('--pb', li.dataset.pb); fig.style.setProperty('--pf', li.dataset.pf);
+      fb.textContent = li.querySelector('.t').textContent;
+      gsap.to(prev, {autoAlpha:1, scale:1, duration:.24, ease:'power2.out', overwrite:'auto'});
+    });
+  });
+  list.addEventListener('pointerleave', function(){ gsap.to(prev, {autoAlpha:0, scale:.9, duration:.2, ease:'power2.in', overwrite:'auto'}); });
+  gsap.set(prev, {scale:.9});
+})();
+
+/* ── PROCESS: one accent column at a time ── */
+var steps = $$('.step');
+function setStep(i){ steps.forEach(function(s, k){ s.classList.toggle('on', k === i); }); }
+
+/* ═══ everything below needs motion + GSAP ═══ */
+if (!motion){ clearTimeout(readyTimer); root.classList.add('ready'); return; }
+
+var E_BRAND = 'expo.out';
+
+/* ── HERO INTRO — 0 G · 160 bar · 360 O O · 560 V · 800 tagline ── */
+(function(){
+  var tl = gsap.timeline({defaults:{ease:E_BRAND}, onStart:function(){ clearTimeout(readyTimer); root.classList.add('ready'); }});
+  gsap.set('.wm-hero .l', {opacity:1});
+  tl.from('.hero-edge', {scaleY:0, duration:.8}, 0)
+    .from('.wm-hero .l-g', {yPercent:110, duration:.8}, 0)
+    .from('.wm-hero .l-g rect', {scaleX:0, transformOrigin:'100% 50%', duration:.4}, .16)
+    .from(['.wm-hero .l-o1', '.wm-hero .l-o2'], {yPercent:110, duration:.8, stagger:.06}, .36)
+    .from('.wm-hero .l-v', {yPercent:-110, duration:.8}, .56)
+    .from('.wm-hero .l-o3', {yPercent:110, duration:.8}, .62)
+    .from('#hero [data-intro]', {opacity:0, y:24, duration:.8, stagger:.08, ease:'power3.out'}, .8)
+    .from('.hero-row', {borderTopColor:'rgba(243,240,219,0)', duration:.4}, .8);
+
+  /* scroll away: the wordmark rises slower than the page, the rest settles out */
+  gsap.to('.wm-hero', {yPercent:-18, ease:'none', scrollTrigger:{trigger:'#hero', start:'top top', end:'bottom top', scrub:true}});
+  gsap.to('.hero-row, .hero-meta', {opacity:0, y:-40, ease:'none', scrollTrigger:{trigger:'#hero', start:'30% top', end:'80% top', scrub:true}});
+})();
+
+/* ── PORTAL — the stadium counter grows to full bleed ── */
+(function(){
+  var win = $('.portal-win');
+  function stadium(){
+    var w = Math.min(innerWidth * .22, 240), h = w * 1.666;
+    var ix = (innerWidth - w) / 2, iy = (innerHeight - h) / 2;
+    return 'inset(' + iy + 'px ' + ix + 'px ' + iy + 'px ' + ix + 'px round ' + (w / 2) + 'px)';
+  }
+  var tl = gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:'#portal', start:'top top', end:'bottom bottom', scrub:.6, invalidateOnRefresh:true}});
+  tl.fromTo(win, {clipPath:stadium}, {clipPath:'inset(0px 0px 0px 0px round 0px)', duration:.55, ease:'power2.inOut'}, .05)
+    .to('.ph-a', {yPercent:-160, opacity:0, duration:.35}, .1)
+    .to('.ph-b', {yPercent:160, opacity:0, duration:.35}, .1)
+    .fromTo('.pw-cols', {scale:1.35}, {scale:1, duration:.6, ease:'power2.out'}, .05)
+    .fromTo('.pw-col:nth-child(1)', {yPercent:4}, {yPercent:-10, duration:1}, 0)
+    .fromTo('.pw-col:nth-child(2)', {yPercent:-6}, {yPercent:6, duration:1}, 0)
+    .fromTo('.pw-col:nth-child(3)', {yPercent:6}, {yPercent:-16, duration:1}, 0)
+    .to('.pw-cap', {opacity:1, duration:.15}, .66)
+    .from('.pw-cap > *', {y:40, stagger:.05, duration:.2, ease:'power3.out'}, .66);
+})();
+
+/* ── HEADINGS: words rise, restrained stagger ── */
+$$('[data-split]').forEach(function(el){
+  if (el.closest('#hero')) return;
+  gsap.from($$('.wi', el), {yPercent:110, duration:.9, ease:E_BRAND, stagger:.06,
+    scrollTrigger:{trigger:el, start:'top 86%', once:true}});
+});
+/* ── SUPPORTING COPY + groups ── */
+$$('[data-rev]').forEach(function(el){
+  gsap.from(el, {y:32, opacity:0, duration:.8, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 88%', once:true}});
+});
+$$('[data-rev-group]').forEach(function(g){
+  gsap.from(g.children, {y:40, opacity:0, duration:.8, ease:'power3.out', stagger:.08, scrollTrigger:{trigger:g, start:'top 85%', once:true}});
+});
+$$('.label i').forEach(function(b){
+  gsap.from(b, {scaleX:0, transformOrigin:'left', duration:.4, ease:E_BRAND, scrollTrigger:{trigger:b, start:'top 92%', once:true}});
+});
+
+/* ── MANIFESTO inks in word by word as you read ── */
+(function(){
+  var p = $('[data-ink]'); if (!p) return;
+  var words = p.textContent.trim().split(/\s+/);
+  p.setAttribute('aria-label', p.textContent.trim());
+  p.innerHTML = words.map(function(w){ return '<span class="mw" aria-hidden="true">' + w + '</span>'; }).join(' ');
+  gsap.fromTo($$('.mw', p), {opacity:.14}, {opacity:1, stagger:.1, ease:'none',
+    scrollTrigger:{trigger:p, start:'top 80%', end:'bottom 45%', scrub:true}});
+})();
+
+/* ── PRICE count-up ── */
+$$('[data-count]').forEach(function(el){
+  var o = {v:0}, to = +el.dataset.count;
+  gsap.to(o, {v:to, duration:1.1, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 90%', once:true},
+    onUpdate:function(){ el.textContent = '$' + Math.round(o.v); }});
+});
+
+/* ── PROCESS accent follows the read ── */
+ScrollTrigger.create({trigger:'.steps', start:'top 75%', end:'bottom 35%',
+  onUpdate:function(s){ setStep(Math.min(steps.length - 1, Math.floor(s.progress * steps.length))); }});
+
+/* ── WORK: pinned horizontal run on large screens only ── */
+var mm = gsap.matchMedia();
+mm.add('(min-width:1000px) and (min-height:640px)', function(){
+  var track = $('.work-track'), fill = $('.work-rail .rail i'), count = $('.work-rail .count');
+  var cards = $$('.wcard', track), n = cards.length;
+  function dist(){ return Math.max(0, track.scrollWidth - innerWidth); }
+  var tween = gsap.to(track, {x:function(){ return -dist(); }, ease:'none',
+    scrollTrigger:{trigger:'#work', pin:true, start:'top top', end:function(){ return '+=' + dist(); }, scrub:.8, invalidateOnRefresh:true, anticipatePin:1,
+      onUpdate:function(s){
+        fill.style.transform = 'scaleX(' + s.progress + ')';
+        var i = Math.min(n, Math.round(s.progress * (n - 1)) + 1);
+        count.textContent = (i < 10 ? '0' : '') + i + ' / ' + (n < 10 ? '0' : '') + n;
+      }}});
+  /* image drift inside each frame, against the run */
+  cards.forEach(function(c){
+    var img = c.querySelector('img'); if (!img) return;
+    gsap.fromTo(img, {xPercent:-6}, {xPercent:6, ease:'none',
+      scrollTrigger:{trigger:c, containerAnimation:tween, start:'left right', end:'right left', scrub:true}});
+  });
+  return function(){ gsap.set(track, {clearProps:'transform'}); };
+});
+mm.add('(max-width:999px), (max-height:639px)', function(){
+  $$('.wcard, .wend').forEach(function(c){
+    gsap.from(c, {y:48, opacity:0, duration:.8, ease:'power3.out', scrollTrigger:{trigger:c, start:'top 90%', once:true}});
+  });
+});
+
+/* ── "View" stadium follows the pointer over case cards ── */
+if (fine){
+  var view = $('#view');
+  var vx = gsap.quickTo(view, 'x', {duration:.35, ease:'power3.out'}), vy = gsap.quickTo(view, 'y', {duration:.35, ease:'power3.out'});
+  $$('.wcard').forEach(function(c){
+    c.addEventListener('pointerenter', function(e){ vx(e.clientX); vy(e.clientY); gsap.to(view, {scale:1, duration:.24, ease:'power2.out', overwrite:'auto'}); });
+    c.addEventListener('pointermove', function(e){ vx(e.clientX); vy(e.clientY); });
+    c.addEventListener('pointerleave', function(){ gsap.to(view, {scale:0, duration:.18, ease:'power2.in', overwrite:'auto'}); });
+  });
+  window.addEventListener('blur', function(){ gsap.set(view, {scale:0}); });
+}
+
+/* ── FOOTER sign-off: the wordmark settles onto its baseline ── */
+gsap.from('.wm-foot .l', {yPercent:110, ease:'none', stagger:.08,
+  scrollTrigger:{trigger:'.wm-foot', start:'top bottom', end:'bottom bottom', scrub:.6}});
+
+/* ── keep measurements honest after fonts and media ── */
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
+window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+window.addEventListener('pagehide', function(){ mm.revert(); if (lenis) lenis.destroy(); });
+})();
+
+/* ── FORM → Web3Forms (plain top-level post, redirects back with ?sent=1) ── */
+(function(){
+var form = document.getElementById('brief'), ok = document.getElementById('success');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  var valid = true;
+  [].forEach.call(form.querySelectorAll('input:not(.hp):not(.cc-search):not([type=hidden]), select, textarea'), function(el){
+    var bad = !el.value.trim() || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value));
+    el.closest('.field').classList.toggle('invalid', bad);
+    if (bad && valid){ el.focus(); valid = false; }
+  });
+  if (!valid) return;
+  var d = new FormData(form);
+  if (d.get('_honey')) return;
+  var fullWa = '+' + d.get('cc') + ' ' + String(d.get('whatsapp')).replace(/^\s*0+/, '').trim();
+  var btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true; btn.firstChild.textContent = 'Sending…';
+  var fields = {
+    access_key: '7f33ada9-171b-468f-9602-09c2474d1802',
+    subject: 'New brief — ' + d.get('name') + ' · ' + d.get('service'),
+    from_name: 'Goovo Studios website', replyto: d.get('email'),
+    redirect: location.origin + location.pathname + '?sent=1#contact',
+    Name: d.get('name'), WhatsApp: fullWa, Email: d.get('email'),
+    Service: d.get('service'), Budget: d.get('budget'), Details: d.get('details')
+  };
+  var post = document.createElement('form');
+  post.method = 'POST'; post.action = 'https://api.web3forms.com/submit'; post.style.display = 'none';
+  Object.keys(fields).forEach(function(k){ var i = document.createElement('input'); i.type = 'hidden'; i.name = k; i.value = fields[k]; post.appendChild(i); });
+  document.body.appendChild(post); post.submit();
+});
+[].forEach.call(form.querySelectorAll('input, select, textarea'), function(el){
+  el.addEventListener('input', function(){ var f = el.closest('.field'); if (f) f.classList.remove('invalid'); });
+});
+if (/[?&]sent=1/.test(location.search)){
+  ok.classList.add('show'); requestAnimationFrame(function(){ ok.classList.add('wipe'); });
+  if (history.replaceState) history.replaceState(null, '', location.pathname + '#contact');
+}
+
+/* ── COUNTRY CODE PICKER ── */
+var DATA = [["Pakistan","92","pk"],["United Arab Emirates","971","ae"],["Saudi Arabia","966","sa"],["United Kingdom","44","gb"],["United States","1","us"],["Canada","1","ca"],["Afghanistan","93","af"],["Aland","358","ax"],["Albania","355","al"],["Algeria","213","dz"],["American Samoa","1684","as"],["Andorra","376","ad"],["Angola","244","ao"],["Anguilla","1264","ai"],["Antigua and Barbuda","1268","ag"],["Argentina","54","ar"],["Armenia","374","am"],["Aruba","297","aw"],["Australia","61","au"],["Austria","43","at"],["Azerbaijan","994","az"],["Bahamas","1242","bs"],["Bahrain","973","bh"],["Bangladesh","880","bd"],["Barbados","1246","bb"],["Belarus","375","by"],["Belgium","32","be"],["Belize","501","bz"],["Benin","229","bj"],["Bermuda","1441","bm"],["Bhutan","975","bt"],["Bolivia","591","bo"],["Bonaire","5997","bq"],["Bosnia and Herzegovina","387","ba"],["Botswana","267","bw"],["Brazil","55","br"],["British Virgin Islands","1284","vg"],["Brunei","673","bn"],["Bulgaria","359","bg"],["Burkina Faso","226","bf"],["Burundi","257","bi"],["Cabo Verde","238","cv"],["Cambodia","855","kh"],["Cameroon","237","cm"],["Cayman Islands","1345","ky"],["Central African Republic","236","cf"],["Chad","235","td"],["Chile","56","cl"],["China","86","cn"],["Christmas Island","61","cx"],["Cocos (Keeling) Islands","61","cc"],["Colombia","57","co"],["Comoros","269","km"],["Cook Islands","682","ck"],["Costa Rica","506","cr"],["Croatia","385","hr"],["Cuba","53","cu"],["Curacao","5999","cw"],["Cyprus","357","cy"],["Czechia","420","cz"],["Democratic Republic of the Congo","243","cd"],["Denmark","45","dk"],["Djibouti","253","dj"],["Dominica","1767","dm"],["Dominican Republic","1809","do"],["East Timor","670","tl"],["Ecuador","593","ec"],["Egypt","20","eg"],["El Salvador","503","sv"],["Equatorial Guinea","240","gq"],["Eritrea","291","er"],["Estonia","372","ee"],["Eswatini","268","sz"],["Ethiopia","251","et"],["Falkland Islands","500","fk"],["Faroe Islands","298","fo"],["Fiji","679","fj"],["Finland","358","fi"],["France","33","fr"],["French Guiana","594","gf"],["French Polynesia","689","pf"],["Gabon","241","ga"],["Gambia","220","gm"],["Georgia","995","ge"],["Germany","49","de"],["Ghana","233","gh"],["Gibraltar","350","gi"],["Greece","30","gr"],["Greenland","299","gl"],["Grenada","1473","gd"],["Guadeloupe","590","gp"],["Guam","1671","gu"],["Guatemala","502","gt"],["Guernsey","44","gg"],["Guinea","224","gn"],["Guinea-Bissau","245","gw"],["Guyana","592","gy"],["Haiti","509","ht"],["Honduras","504","hn"],["Hong Kong","852","hk"],["Hungary","36","hu"],["Iceland","354","is"],["India","91","in"],["Indonesia","62","id"],["Iran","98","ir"],["Iraq","964","iq"],["Ireland","353","ie"],["Isle of Man","44","im"],["Israel","972","il"],["Italy","39","it"],["Ivory Coast","225","ci"],["Jamaica","1876","jm"],["Japan","81","jp"],["Jersey","44","je"],["Jordan","962","jo"],["Kazakhstan","7","kz"],["Kenya","254","ke"],["Kiribati","686","ki"],["Kosovo","383","xk"],["Kuwait","965","kw"],["Kyrgyzstan","996","kg"],["Laos","856","la"],["Latvia","371","lv"],["Lebanon","961","lb"],["Lesotho","266","ls"],["Liberia","231","lr"],["Libya","218","ly"],["Liechtenstein","423","li"],["Lithuania","370","lt"],["Luxembourg","352","lu"],["Macao","853","mo"],["Madagascar","261","mg"],["Malawi","265","mw"],["Malaysia","60","my"],["Maldives","960","mv"],["Mali","223","ml"],["Malta","356","mt"],["Marshall Islands","692","mh"],["Martinique","596","mq"],["Mauritania","222","mr"],["Mauritius","230","mu"],["Mayotte","262","yt"],["Mexico","52","mx"],["Micronesia","691","fm"],["Moldova","373","md"],["Monaco","377","mc"],["Mongolia","976","mn"],["Montenegro","382","me"],["Montserrat","1664","ms"],["Morocco","212","ma"],["Mozambique","258","mz"],["Myanmar","95","mm"],["Namibia","264","na"],["Nauru","674","nr"],["Nepal","977","np"],["Netherlands","31","nl"],["New Caledonia","687","nc"],["New Zealand","64","nz"],["Nicaragua","505","ni"],["Niger","227","ne"],["Nigeria","234","ng"],["Niue","683","nu"],["Norfolk Island","672","nf"],["North Korea","850","kp"],["North Macedonia","389","mk"],["Northern Mariana Islands","1670","mp"],["Norway","47","no"],["Oman","968","om"],["Palau","680","pw"],["Palestine","970","ps"],["Panama","507","pa"],["Papua New Guinea","675","pg"],["Paraguay","595","py"],["Peru","51","pe"],["Philippines","63","ph"],["Poland","48","pl"],["Portugal","351","pt"],["Puerto Rico","1787","pr"],["Qatar","974","qa"],["Republic of the Congo","242","cg"],["Reunion","262","re"],["Romania","40","ro"],["Russia","7","ru"],["Rwanda","250","rw"],["Saint Barthelemy","590","bl"],["Saint Helena","290","sh"],["Saint Kitts and Nevis","1869","kn"],["Saint Lucia","1758","lc"],["Saint Martin","590","mf"],["Saint Pierre and Miquelon","508","pm"],["Saint Vincent and the Grenadines","1784","vc"],["Samoa","685","ws"],["San Marino","378","sm"],["Sao Tome and Principe","239","st"],["Senegal","221","sn"],["Serbia","381","rs"],["Seychelles","248","sc"],["Sierra Leone","232","sl"],["Singapore","65","sg"],["Sint Maarten","1721","sx"],["Slovakia","421","sk"],["Slovenia","386","si"],["Solomon Islands","677","sb"],["Somalia","252","so"],["South Africa","27","za"],["South Korea","82","kr"],["South Sudan","211","ss"],["Spain","34","es"],["Sri Lanka","94","lk"],["Sudan","249","sd"],["Suriname","597","sr"],["Sweden","46","se"],["Switzerland","41","ch"],["Syria","963","sy"],["Taiwan","886","tw"],["Tajikistan","992","tj"],["Tanzania","255","tz"],["Thailand","66","th"],["Togo","228","tg"],["Tokelau","690","tk"],["Tonga","676","to"],["Trinidad and Tobago","1868","tt"],["Tunisia","216","tn"],["Türkiye","90","tr"],["Turkmenistan","993","tm"],["Turks and Caicos Islands","1649","tc"],["Tuvalu","688","tv"],["U.S. Virgin Islands","1340","vi"],["Uganda","256","ug"],["Ukraine","380","ua"],["Uruguay","598","uy"],["Uzbekistan","998","uz"],["Vanuatu","678","vu"],["Vatican City","379","va"],["Venezuela","58","ve"],["Vietnam","84","vn"],["Wallis and Futuna","681","wf"],["Western Sahara","212","eh"],["Yemen","967","ye"],["Zambia","260","zm"],["Zimbabwe","263","zw"]];
+var PIN = 6;
+var rootCc = document.getElementById('cc'); if (!rootCc) return;
+var btn = rootCc.querySelector('.cc-btn'), pop = rootCc.querySelector('.cc-pop'),
+    search = rootCc.querySelector('.cc-search'), list = rootCc.querySelector('.cc-list'),
+    hidden = rootCc.querySelector('input[type=hidden]'), flag = rootCc.querySelector('.cc-flag'),
+    code = rootCc.querySelector('.cc-code'), wa = document.getElementById('f-wa');
+var cur = 'pk', items = [], active = -1;
+function src(iso, w){ return 'https://flagcdn.com/w' + w + '/' + iso + '.png'; }
+function pick(r){
+  cur = r[2]; hidden.value = r[1]; code.textContent = '+' + r[1];
+  flag.src = src(r[2], 40); flag.srcset = src(r[2], 80) + ' 2x';
+  btn.setAttribute('aria-label', 'Country code, ' + r[0] + ' +' + r[1]);
+  close(); if (wa) wa.focus();
+}
+function render(q){
+  q = (q || '').trim().toLowerCase().replace(/^\+/, '');
+  list.innerHTML = ''; items = []; active = -1;
+  var rows = DATA.map(function(r, i){ return [r, i]; }).filter(function(x){
+    if (!q) return true; var r = x[0];
+    return r[0].toLowerCase().indexOf(q) > -1 || r[1].indexOf(q) === 0 || r[2] === q;
+  });
+  if (!rows.length){ var n = document.createElement('li'); n.className = 'cc-none'; n.textContent = 'No match'; list.appendChild(n); return; }
+  rows.forEach(function(x){
+    var r = x[0];
+    if (!q && x[1] === PIN){ var sep = document.createElement('li'); sep.className = 'cc-sep'; sep.setAttribute('aria-hidden', 'true'); list.appendChild(sep); }
+    var li = document.createElement('li'); li.setAttribute('role', 'option');
+    li.setAttribute('aria-selected', r[2] === cur ? 'true' : 'false');
+    li.innerHTML = '<img class="cc-flag" loading="lazy" width="22" height="16" alt="" src="' + src(r[2], 40) + '" srcset="' + src(r[2], 80) + ' 2x"><span class="cc-n"></span><span class="cc-d">+' + r[1] + '</span>';
+    li.querySelector('.cc-n').textContent = r[0];
+    li.addEventListener('click', function(){ pick(r); });
+    li.addEventListener('mousemove', function(){ setActive(items.indexOf(li)); });
+    list.appendChild(li); items.push(li); li._r = r;
+  });
+}
+function setActive(i){
+  if (items[active]) items[active].classList.remove('on');
+  active = Math.max(0, Math.min(items.length - 1, i));
+  if (items[active]){ items[active].classList.add('on'); items[active].scrollIntoView({block:'nearest'}); }
+}
+function open(){
+  render(''); pop.hidden = false; rootCc.classList.add('open'); btn.setAttribute('aria-expanded', 'true');
+  search.value = ''; search.focus();
+  var sel = list.querySelector('[aria-selected="true"]'); if (sel) sel.scrollIntoView({block:'center'});
+}
+function close(){ pop.hidden = true; rootCc.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+btn.addEventListener('click', function(){ pop.hidden ? open() : close(); });
+search.addEventListener('input', function(){ render(search.value); if (items.length) setActive(0); });
+search.addEventListener('keydown', function(e){
+  if (e.key === 'ArrowDown'){ e.preventDefault(); setActive(active + 1); }
+  else if (e.key === 'ArrowUp'){ e.preventDefault(); setActive(active - 1); }
+  else if (e.key === 'Enter'){ e.preventDefault(); var li = items[active] || items[0]; if (li) pick(li._r); }
+  else if (e.key === 'Escape'){ close(); btn.focus(); }
+});
+document.addEventListener('click', function(e){ if (!rootCc.contains(e.target)) close(); });
+})();
+</script>
+</body>
+</html>

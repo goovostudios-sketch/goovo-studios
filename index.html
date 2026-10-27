@@ -29,7 +29,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#3B1450">
-<link rel="preload" as="image" type="image/webp" href="lion/s01.webp" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="lion/s01.webp" media="(min-width:1000px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="lion/sm01.webp" media="(max-width:999px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -1179,6 +1180,15 @@ html.lenis{scroll-behavior:auto}
 .st-cap{position:absolute;inset:auto 0 0 0;z-index:2;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end;padding:clamp(24px,4vw,56px);background:linear-gradient(to top,rgba(14,14,14,.86),rgba(14,14,14,0))}
 .st-cap p{margin:0;max-width:12ch;font:600 clamp(32px,4.6vw,72px)/1 Unbounded,sans-serif;letter-spacing:-.028em;color:var(--bone)}
 @media (max-aspect-ratio:1/1){.st-tile{aspect-ratio:1/2}}
+@media (max-width:999px){
+  .st-hero{padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+  .st-shade{background:linear-gradient(0deg,rgba(26,8,42,.98) 0%,rgba(26,8,42,.9) 34%,rgba(26,8,42,.4) 50%,rgba(26,8,42,0) 60%)}
+  .st-badge{display:none}
+  .st-h1{font-size:clamp(42px,12.5vw,64px);margin-bottom:16px}
+  .st-sub{font-size:15px;line-height:1.6}
+  .st-cta{margin-top:20px;gap:10px;flex-wrap:nowrap}
+  .st-cta .btn{min-height:48px;padding:0 20px;font-size:15px;white-space:nowrap}
+}
 @media (min-width:1000px){
   .st-hero{align-items:center;padding-bottom:0}
   .st-shade{background:linear-gradient(90deg,rgba(26,8,42,.92) 0%,rgba(26,8,42,.55) 34%,rgba(26,8,42,0) 56%)}
@@ -2709,7 +2719,9 @@ if (/[?&]sent=1/.test(location.search)){
   /* frames live on sprite sheets: 10 per sheet, 2 across × 5 down, 1280×720 each.
      lion/sNN = the 200-frame sequence, lion/kNN = the 68 idle in-betweens */
   var FW = 1280, FH = 720, PER = 10;
-  function sheetSrc(prefix, s){ return 'lion/' + prefix + ('0' + (s + 1)).slice(-2) + '.' + EXT; }
+  var SMALL = !matchMedia('(min-width:1000px)').matches;      /* picked once, at load */
+  var SW = SMALL ? 960 : 1280, SH = SMALL ? 540 : 720;
+  function sheetSrc(prefix, s){ return 'lion/' + prefix + (SMALL ? 'm' : '') + ('0' + (s + 1)).slice(-2) + '.' + EXT; }
   function pick(i){
     if (frames[i] && frames[i]._ok) return frames[i];
     for (var k = 1; k < N; k++){
@@ -2730,20 +2742,20 @@ if (/[?&]sent=1/.test(location.search)){
     ctx.fillStyle = BG; ctx.fillRect(0, 0, W, H);
     if (!img) return;
     var mob = !wide.matches, iw = FW, ih = FH;
-    var s = mob ? Math.max(W / iw, H * .6 / ih) : Math.max(W / iw, H / ih), dw = iw * s, dh = ih * s;
-    var dx = (W - dw) / 2 + st.shift * W, dy = (mob ? H * .07 : (H - dh) / 2) + st.drop * H;
+    var s = mob ? Math.max(W / iw, H * .52 / ih) : Math.max(W / iw, H / ih), dw = iw * s, dh = ih * s;
+    var dx = (W - dw) / 2 + st.shift * W, dy = (mob ? H * .02 : (H - dh) / 2) + st.drop * H;
     /* zoom about the case itself, so it grows to fill the screen */
     var z = st.zoom;
     dx = dx + CASE_U * dw * (1 - z); dy = dy + CASE_V * dh * (1 - z); dw *= z; dh *= z;
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(img.sheet, img.x, img.y, FW, FH, dx, dy, dw, dh);
+    ctx.drawImage(img.sheet, img.x, img.y, img.w, img.h, dx, dy, dw, dh);
     var g;
     if (dx > 0){ g = ctx.createLinearGradient(dx, 0, dx + dw * .25, 0); g.addColorStop(0, BG); g.addColorStop(1, BG0); ctx.fillStyle = g; ctx.fillRect(dx - 1, 0, dw * .25 + 1, H); }
     if (dy > 0){ g = ctx.createLinearGradient(0, dy, 0, dy + dh * .2); g.addColorStop(0, BG); g.addColorStop(1, BG0); ctx.fillStyle = g; ctx.fillRect(0, dy - 1, W, dh * .2 + 1); }
     if (dy + dh < H){ g = ctx.createLinearGradient(0, dy + dh * .65, 0, dy + dh); g.addColorStop(0, BG0); g.addColorStop(1, BG); ctx.fillStyle = g; ctx.fillRect(0, dy + dh * .65, W, H); }
   }
   function size(){
-    var d = Math.min(window.devicePixelRatio || 1, 1.5); lastKey = '';
+    var d = Math.min(window.devicePixelRatio || 1, wide.matches ? 1.5 : 1.25); lastKey = '';
     cv.width = Math.round(innerWidth * d); cv.height = Math.round(innerHeight * d);
     measureO(); apply(cur); render();
   }
@@ -2801,7 +2813,7 @@ if (/[?&]sent=1/.test(location.search)){
     var im = new Image(); im.decoding = 'async';
     var recs = [];
     for (var k = 0; k < PER && s * PER + k < total; k++){
-      var r = {sheet:im, x:(k % 2) * FW, y:Math.floor(k / 2) * FH, id:prefix + (s * PER + k), _ok:false};
+      var r = {sheet:im, x:(k % 2) * SW, y:Math.floor(k / 2) * SH, w:SW, h:SH, id:prefix + (s * PER + k), _ok:false};
       arr[s * PER + k] = r; recs.push(r);
     }
     im.onload = function(){

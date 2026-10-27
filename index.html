@@ -2706,7 +2706,10 @@ if (/[?&]sent=1/.test(location.search)){
 
   /* ── canvas ── */
   var EXT = 'webp';   /* WebP everywhere it decodes (Safari 14+); JPEG for anything older */
-  function src(i){ return 'lion/f' + ('00' + (i + 1)).slice(-3) + '.' + EXT; }
+  /* frames live on sprite sheets: 10 per sheet, 2 across × 5 down, 1280×720 each.
+     lion/sNN = the 200-frame sequence, lion/kNN = the 68 idle in-betweens */
+  var FW = 1280, FH = 720, PER = 10;
+  function sheetSrc(prefix, s){ return 'lion/' + prefix + ('0' + (s + 1)).slice(-2) + '.' + EXT; }
   function pick(i){
     if (frames[i] && frames[i]._ok) return frames[i];
     for (var k = 1; k < N; k++){
@@ -2721,19 +2724,19 @@ if (/[?&]sent=1/.test(location.search)){
     pending = false;
     var i = Math.max(0, Math.min(N - 1, Math.round(st.scrolled ? st.sf : st.f))), img = pick(i);
     if (!st.scrolled && st.idleOn){ var ii = idleFrames[Math.max(0, Math.min(NI - 1, Math.round(st.i)))]; if (ii && ii._ok) img = ii; }
-    var key = (img ? img.src : '') + '|' + st.shift.toFixed(4) + '|' + st.zoom.toFixed(4) + '|' + st.drop.toFixed(4) + '|' + cv.width;
+    var key = (img ? img.id : '') + '|' + st.shift.toFixed(4) + '|' + st.zoom.toFixed(4) + '|' + st.drop.toFixed(4) + '|' + cv.width;
     if (key === lastKey) return; lastKey = key;
     var W = cv.width, H = cv.height;
     ctx.fillStyle = BG; ctx.fillRect(0, 0, W, H);
     if (!img) return;
-    var mob = !wide.matches, iw = img.naturalWidth, ih = img.naturalHeight;
+    var mob = !wide.matches, iw = FW, ih = FH;
     var s = mob ? Math.max(W / iw, H * .6 / ih) : Math.max(W / iw, H / ih), dw = iw * s, dh = ih * s;
     var dx = (W - dw) / 2 + st.shift * W, dy = (mob ? H * .07 : (H - dh) / 2) + st.drop * H;
     /* zoom about the case itself, so it grows to fill the screen */
     var z = st.zoom;
     dx = dx + CASE_U * dw * (1 - z); dy = dy + CASE_V * dh * (1 - z); dw *= z; dh *= z;
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(img, dx, dy, dw, dh);
+    ctx.drawImage(img.sheet, img.x, img.y, FW, FH, dx, dy, dw, dh);
     var g;
     if (dx > 0){ g = ctx.createLinearGradient(dx, 0, dx + dw * .25, 0); g.addColorStop(0, BG); g.addColorStop(1, BG0); ctx.fillStyle = g; ctx.fillRect(dx - 1, 0, dw * .25 + 1, H); }
     if (dy > 0){ g = ctx.createLinearGradient(0, dy, 0, dy + dh * .2); g.addColorStop(0, BG); g.addColorStop(1, BG0); ctx.fillStyle = g; ctx.fillRect(0, dy - 1, W, dh * .2 + 1); }
@@ -2793,16 +2796,22 @@ if (/[?&]sent=1/.test(location.search)){
   }
 
   /* ── frames: drop + pose first, then the throw ── */
-  function load(i, cb){
+  /* one sheet → PER frame records; they turn usable together once it decodes */
+  function loadSheet(prefix, s, arr, total, cb){
     var im = new Image(); im.decoding = 'async';
+    var recs = [];
+    for (var k = 0; k < PER && s * PER + k < total; k++){
+      var r = {sheet:im, x:(k % 2) * FW, y:Math.floor(k / 2) * FH, id:prefix + (s * PER + k), _ok:false};
+      arr[s * PER + k] = r; recs.push(r);
+    }
     im.onload = function(){
-      var done = function(){ im._ok = true; if (cb) cb(); if (Math.abs(i - (st.scrolled ? st.sf : st.f)) < 2){ lastKey = ''; render(); } };
+      var done = function(){ recs.forEach(function(r){ r._ok = true; }); if (cb) cb(); lastKey = ''; render(); };
       if (im.decode) im.decode().then(done, done); else done();
     };
     im.onerror = function(){ if (cb) cb(); };
-    im.src = src(i); frames[i] = im;
+    im.src = sheetSrc(prefix, s);
   }
-  var need = IDLE_B + 1, got = 0, t0 = Date.now();
+  var needSheets = Math.ceil((IDLE_B + 1) / PER), got = 0, t0 = Date.now();
   var probe = new Image();
   probe.onload = function(){ start(probe.width > 0 ? 'webp' : 'jpg'); };
   probe.onerror = function(){ start('jpg'); };
@@ -2810,7 +2819,7 @@ if (/[?&]sent=1/.test(location.search)){
   var started = false;
   function start(ext){
     if (started) return; started = true; EXT = ext;
-    for (var i = 0; i < need; i++) load(i, function(){ if (++got === need) setTimeout(begin, Math.max(0, 1000 - (Date.now() - t0))); });
+    for (var s = 0; s < needSheets; s++) loadSheet('s', s, frames, N, function(){ if (++got === needSheets) setTimeout(begin, Math.max(0, 1000 - (Date.now() - t0))); });
   }
   var failSafe = setTimeout(begin, 7000);
 
@@ -2835,8 +2844,8 @@ if (/[?&]sent=1/.test(location.search)){
   }
   function begin(){
     if (began) return; began = true; clearTimeout(failSafe);
-    for (var k = 0; k < NI; k++) (function(k){ var im = new Image(); im.decoding = 'async'; im.onload = function(){ var ok = function(){ im._ok = true; }; if (im.decode) im.decode().then(ok, ok); else ok(); }; im.src = 'lion/i' + ('00' + (k + 1)).slice(-3) + '.' + EXT; idleFrames[k] = im; })(k);
-    for (var j = need; j < N; j++) load(j);
+    for (var k = 0; k < Math.ceil(NI / PER); k++) loadSheet('k', k, idleFrames, NI);
+    for (var j = needSheets; j < Math.ceil(N / PER); j++) loadSheet('s', j, frames, N);
     playIntro();
   }
 

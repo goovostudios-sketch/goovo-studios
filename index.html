@@ -29,7 +29,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#3B1450">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="image" type="image/webp" href="lion/s01.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -2685,7 +2685,7 @@ if (/[?&]sent=1/.test(location.search)){
   var N = 200, IDLE_A = 50, IDLE_B = 74, PICKUP = 88, BG = '#1A082A', BG0 = 'rgba(26,8,42,0)';
   var CASE_U = .6, CASE_V = .5, END = 195;   /* frame 195: the case fills the lens; later frames pass it */               /* where the case sits in the last frame, image space */
   var NI = 68, idleFrames = new Array(NI);   /* 60fps in-betweens of the pose, frames 50–74 */
-  var frames = new Array(N), st = {f:0, i:0, idleOn:false, sf:IDLE_B, sf0:IDLE_B, shift:0, zoom:1, drop:-.85, scrolled:false};
+  var frames = new Array(N), st = {f:0, i:0, idleOn:false, sf:IDLE_B, sf0:IDLE_B, shift:0, zoom:1, drop:-.4, scrolled:false};
   var wide = matchMedia('(min-width:1000px)');
   var idle = null, intro = null, began = false, far = false;
   var clamp = function(v){ return v < 0 ? 0 : v > 1 ? 1 : v; };
@@ -2819,7 +2819,9 @@ if (/[?&]sent=1/.test(location.search)){
   var started = false;
   function start(ext){
     if (started) return; started = true; EXT = ext;
-    for (var s = 0; s < needSheets; s++) loadSheet('s', s, frames, N, function(){ if (++got === needSheets) setTimeout(begin, Math.max(0, 1000 - (Date.now() - t0))); });
+    /* start the moment the first sheet (frames 0–9) is ready — the rest stream in while he falls */
+    loadSheet('s', 0, frames, N, function(){ setTimeout(begin, Math.max(0, 950 - (Date.now() - t0))); });
+    for (var s = 1; s < needSheets; s++) loadSheet('s', s, frames, N);
   }
   var failSafe = setTimeout(begin, 7000);
 
@@ -2827,7 +2829,7 @@ if (/[?&]sent=1/.test(location.search)){
     if (idle){ idle.kill(); idle = null; }
     if (intro) intro.kill();
     intro = gsap.timeline({defaults:{ease:'expo.out'}});
-    intro.fromTo(st, {drop:-.85, f:0}, {drop:0, duration:.6, ease:'power2.in', onUpdate:render}, 0)
+    intro.fromTo(st, {drop:-.4, f:0}, {drop:0, duration:.5, ease:'power2.in', onUpdate:render}, 0)
       .fromTo(st, {f:0}, {f:IDLE_A, duration:2.5, ease:'none', onUpdate:render, immediateRender:false}, 0)
       .fromTo('.st-edge', {scaleY:0}, {scaleY:1, duration:.8}, .35)
       .to(chars, {opacity:1, yPercent:0, scale:1, rotation:0, filter:'blur(0px)', fontWeight:800, duration:.72, stagger:.055, ease:'back.out(1.7)'}, 2.1)

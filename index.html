@@ -2695,7 +2695,7 @@ if (/[?&]sent=1/.test(location.search)){
   var N = 200, IDLE_A = 50, IDLE_B = 74, PICKUP = 88, BG = '#1A082A', BG0 = 'rgba(26,8,42,0)';
   var CASE_U = .6, CASE_V = .5, END = 195;   /* frame 195: the case fills the lens; later frames pass it */               /* where the case sits in the last frame, image space */
   var NI = 68, idleFrames = new Array(NI);   /* 60fps in-betweens of the pose, frames 50–74 */
-  var frames = new Array(N), st = {f:0, i:0, idleOn:false, sf:IDLE_B, sf0:IDLE_B, shift:0, zoom:1, drop:-.4, scrolled:false};
+  var frames = new Array(N), st = {f:0, i:0, idleOn:false, sf:IDLE_B, sf0:IDLE_B, shift:0, zoom:1, mfit:0, drop:-.4, scrolled:false};
   var wide = matchMedia('(min-width:1000px)');
   var idle = null, intro = null, began = false, far = false;
   var clamp = function(v){ return v < 0 ? 0 : v > 1 ? 1 : v; };
@@ -2736,14 +2736,15 @@ if (/[?&]sent=1/.test(location.search)){
     pending = false;
     var i = Math.max(0, Math.min(N - 1, Math.round(st.scrolled ? st.sf : st.f))), img = pick(i);
     if (!st.scrolled && st.idleOn){ var ii = idleFrames[Math.max(0, Math.min(NI - 1, Math.round(st.i)))]; if (ii && ii._ok) img = ii; }
-    var key = (img ? img.id : '') + '|' + st.shift.toFixed(4) + '|' + st.zoom.toFixed(4) + '|' + st.drop.toFixed(4) + '|' + cv.width;
+    var key = (img ? img.id : '') + '|' + st.shift.toFixed(4) + '|' + st.zoom.toFixed(4) + '|' + st.drop.toFixed(4) + '|' + st.mfit.toFixed(4) + '|' + cv.width;
     if (key === lastKey) return; lastKey = key;
     var W = cv.width, H = cv.height;
     ctx.fillStyle = BG; ctx.fillRect(0, 0, W, H);
     if (!img) return;
     var mob = !wide.matches, iw = FW, ih = FH;
-    var s = mob ? Math.max(W / iw, H * .52 / ih) : Math.max(W / iw, H / ih), dw = iw * s, dh = ih * s;
-    var dx = (W - dw) / 2 + st.shift * W, dy = (mob ? H * .02 : (H - dh) / 2) + st.drop * H;
+    /* phones: top half while the copy is up, then he grows to the middle of the screen for the throw */
+    var s = mob ? Math.max(W / iw, H * (.52 + .3 * st.mfit) / ih) : Math.max(W / iw, H / ih), dw = iw * s, dh = ih * s;
+    var dx = (W - dw) / 2 + st.shift * W, dy = (mob ? H * .02 + ((H - dh) / 2 - H * .02) * st.mfit : (H - dh) / 2) + st.drop * H;
     /* zoom about the case itself, so it grows to fill the screen */
     var z = st.zoom;
     dx = dx + CASE_U * dw * (1 - z); dy = dy + CASE_V * dh * (1 - z); dw *= z; dh *= z;
@@ -2785,11 +2786,19 @@ if (/[?&]sent=1/.test(location.search)){
     var fly = seg(p, .01, .2), fe = Math.pow(fly, 2), steer = smooth(seg(p, .01, .12));
     var tx = (vw / 2 - (+h1.dataset.cx || 0)) * steer, ty = (vh / 2 - (+h1.dataset.cy || 0)) * steer;
     if (p <= 0 && h1.style.transform){ h1.style.transform = 'none'; void h1.offsetWidth; }   /* force a clean repaint back at rest */
-    h1.style.transform = p > 0 ? 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0) scale(' + (1 + fe * (wide.matches ? 34 : 20)).toFixed(3) + ')' : '';
-    h1.style.opacity = 1 - seg(p, .15, .2);
+    if (wide.matches){
+      h1.style.transform = p > 0 ? 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0) scale(' + (1 + fe * 34).toFixed(3) + ')' : '';
+      h1.style.opacity = 1 - seg(p, .15, .2);
+    } else {
+      /* phones: the headline sits under Goava, so it lifts away with the copy instead of flying through */
+      var lift = seg(p, 0, .06);
+      h1.style.transform = p > 0 ? 'translate3d(0,' + (-60 * lift).toFixed(1) + 'px,0)' : '';
+      h1.style.opacity = 1 - lift;
+    }
     /* the lion */
     st.sf = st.sf0 + (END - st.sf0) * seg(p, 0, .74);   /* picks up from whatever frame the idle was on */
     st.shift = shift0() * (1 - inOut(seg(p, .04, .44)));
+    st.mfit = smooth(seg(p, .02, .2));
     var zq = seg(p, .66, .8); st.zoom = 1 + zq * zq * 1.3;
     shade.style.opacity = 1 - seg(p, .05, .35);
     /* the case opens from the middle */
